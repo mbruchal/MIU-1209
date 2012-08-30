@@ -64,8 +64,9 @@ a:active {
 }*/
 p{
 	font-family: 'Black Ops One', cursive;
-	color: white;
+	color: yellow;
 	margin: 1.5em auto;
+	margin-top: 50px;
 	padding-top: 20px;
 	text-align: center;
 }
@@ -153,6 +154,9 @@ div ul{
 }
 #browselinks{
 	margin-left: 20px;
+}
+#mysearch{
+	color: yellow;
 }
 
 
