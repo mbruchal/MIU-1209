@@ -1,0 +1,66 @@
+<!doctype html>  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>My Workouts +Goal Tracker</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+
+	<!--======================================================Home page=======================================================-->
+	<div data-role="page" id="home">
+
+		<div data-role="header" data-position="fixed">
+			<h1>My Workouts +Goal Tracker</h1>
+		</div>
+
+		<div data-role="content">
+			<p><a href="additem.html">Add a new Workout</a></p>
+			<p>Browse by:</p>
+			<p><a href="#workouts">Workouts</a></p>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+
+	</div>
+	<!--======================================================2nd page=======================================================-->
+	<div data-role="page" id="workouts">
+
+		<div data-role="header" data-position="fixed">
+			<h1>Workouts</h1>
+		</div>
+
+		<div data-role="content">
+			<p>Content goes here!</p>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<h4>Footer</h4>
+		</div>
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<script type="text/javascript" src="js/json.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
