@@ -6,15 +6,16 @@
 
 body{
 	font-family: Arial, Helvetica, Verdana, sans-serif; 
-	/*background: url(images/weights.jpg) no-repeat center center fixed;
+	background: url(images/weights.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	background size: cover;
 	height: 100%;
 	margin: 0;
-	background-attachment: fixed;*/
+	background-attachment: fixed;
 	}
 h1{
 	font-family: 'Trade Winds', cursive;
+	background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 553, color-stop(0, #FFFFFF), color-stop(1, #999697));
 	color: red;
 	text-shadow:
 		3px 3px 0 white,
@@ -22,6 +23,11 @@ h1{
 		1px -1px 0 white,
 		-1px 1px 0 white,
 		1px 1px 0 white;
+	font-size: 23px;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: -1px;
 }
 h3{
 	font-family: 'Trade Winds', cursive;
@@ -38,6 +44,9 @@ h3{
 	padding-top: 5px;
 	padding-bottom: 5px;
 	margin-top: -1px;*/
+}
+h4{
+	color: yellow;
 }
 nav{
 	text-align: center;
@@ -75,11 +84,11 @@ a:active {
 p{
 	font-family: 'Black Ops One', cursive;
 	color: white;
-	/*margin: 1.5em auto;
+	background-color: black;
+	margin: 1.5em auto;
 	margin-top: 50px;
-	padding-top: 20px;
-	text-align: center;*/
-}/*
+	text-align: center;
+}
 legend{
 	font-family: 'Trade Winds', cursive;
 	font-size: x-large;
@@ -101,7 +110,7 @@ fieldset{
 	margin-top: 20px;
 }
 li{
-	margin-left: -20px;
+	margin-left: -10px;
 	display: block;
 	font-family: 'Black Ops One', cursive;
 	color: white;
@@ -165,7 +174,7 @@ div ul{
 }
 #browselinks{
 	margin-left: 25px;
-}*/
+}
 
 
 

@@ -29,7 +29,7 @@
 	<!--====================================Set Background image======================================-->
 	<style type="text/css">
 		.ui-page{
-	    	background: transparent url(images/weights.jpg) no-repeat center center;
+	    	background: transparent url(images/weights.jpg) no-repeat center center fixed;
 	    }
 	    h3{
 	    	text-align: center;
@@ -42,20 +42,21 @@
 
 		<div data-role="header" data-position="fixed" data-theme="a">
 			<div>
-				<h3>My Workouts +Goal Tracker</h1>
+				<h3>My Workouts +Goal Tracker</h3>
 			</div>
 		</div>
 		<!--img src="images/weights.jpg" height="250px" width="320px"/-->
 		<div data-role="content">
-			<p><a href="additem.html" data-ajax="false" data-role="button" data-icon="plus" data-iconpos="right" data-theme="e">Add a new Workout</a></p>
+			<p>This app will help you organize your workout routines, and track your goals as you progress.</p>
+			<a href="additem.html" data-ajax="false" data-role="button" data-icon="plus" data-iconpos="right" data-theme="e">Add a new Workout</a>
 			<!--===================Browse Buttons====================-->
 			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e">
 				<li data-role="list-divider" data-theme="a">Explore Exercise Routines</li>
-				<li><a href="#totalbody">Total Body</a></li>
-				<li><a href="#upperbody">Upper Body</a></li>
-				<li><a href="#lowerbody">Lower Body</a></li>
-				<li><a href="#cardio">Cardio</a></li>
-				<li><a href="#crossfit">Crossfit</a></li>
+				<li><a href="#beginner">Beginner</a></li>
+				<li><a href="#intermediate">Intermediate</a></li>
+				<li><a href="#advanced">Advanced</a></li>
+				<li><a href="#bulking">Bulking Up</a></li>
+				<li><a href="#cutting">Cutting Up</a></li>
 			</ul>
 		</div>
 		<!--=======================Footer============================-->
@@ -71,19 +72,19 @@
 		</div>
 
 	</div>
-	<!--======================================================Total Body page=======================================================-->
-	<div data-role="page" id="totalbody" data-add-back-btn="true">
+	<!--======================================================Beginner page=======================================================-->
+	<div data-role="page" id="beginner" data-add-back-btn="true">
 
 		<div data-role="header" data-position="fixed">
-			<h1>Total Body</h1>
+			<h3>Beginner Routines</h3>
 		</div>
 
 		<div data-role="content">
 			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e">
-				<li><a href="#deadlifts">Deadlifts</a></li>
-				<li><a href="#powerclean">Power Cleans</a></li>
-				<li><a href="#snatch">Snatch</a></li>
-				<li><a href="#overheadsquat">Over Head Squats</a></li>
+				<li data-role="list-divider" data-theme="a">3 Day System</li>
+				<li><a href="#bday1">Day #1</a></li>
+				<li><a href="#bday2">Day #2</a></li>
+				<li><a href="#bday3">Day #3</a></li>
 			</ul>
 		</div>
 
@@ -98,6 +99,37 @@
 			</div>
 		</div>
 	</div>
+	<!--======================================================beginner day1 page=======================================================-->
+	<div data-role="page" id="bday1" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Beginner Day 1</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Day 1 Total</h4>
+			<p>System is total but will vary. Warm up with 5 minutes of stretching.</p>
+			<li>Prone Triceps (Skull Crushers): 3 x 12 superset with:</li>
+			<li>Barbell curls: 3 x 12+ if possible</li>
+			<li>Flat bench presses: 3 x 12/15 superset with:</li>
+			<li>Single arm rows: 3 x 10/12</li>
+			<li>Squats: 3 x 15/20</li>
+			<li>Press behind the neck: 3 x 12/15 superset with:</li>
+			<li>Barbell shrugs: 3 x 8/10</li>
+			<h4>Abs</h4>
+			<li>Seated barbell twists: 2 minutes</li>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#gold" data-icon="check">Gold</a></li>
+					<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+					<li><a href="#news" data-icon="star">News</a></li>
+				</ul>
+			</div>
+		</div>
+
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
