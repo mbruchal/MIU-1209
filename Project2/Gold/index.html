@@ -27,23 +27,37 @@
 	<!--======================================================Home page=======================================================-->
 	<div data-role="page" id="home">
 
-		<div data-role="header" data-position="fixed">
+		<div data-role="header" data-position="fixed" data-theme="a">
 			<h1>My Workouts +Goal Tracker</h1>
 		</div>
-
+		<img src="images/weights.jpg"/>
 		<div data-role="content">
-			<p><a href="additem.html">Add a new Workout</a></p>
-			<p>Browse by:</p>
-			<p><a href="#workouts">Workouts</a></p>
+			<p><a href="additem.html"  data-ajax="false" data-role="button" data-icon="plus" data-iconpos="right" data-theme="e">Add a new Workout</a></p>
+			<!--===================Browse Buttons====================-->
+			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e">
+				<li data-role="list-divider" data-theme="a">Explore Exercise Routines</li>
+				<li><a href="#totalbody">Total Body</a></li>
+				<li><a href="#upperbody">Upper Body</a></li>
+				<li><a href="#lowerbody">Lower Body</a></li>
+				<li><a href="#cardio">Cardio</a></li>
+				<li><a href="#crossfit">Crossfit</a></li>
+			</ul>
 		</div>
-
-		<div data-role="footer" data-position="fixed">
-			<h4>Footer</h4>
+		<!--=======================Footer============================-->
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#search" data-icon="search">Search</a></li>
+					<li><a href="#gold" data-icon="check">Gold</a></li>
+					<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+					<li><a href="#news" data-icon="star">News</a></li>
+				</ul>
+			</div>
 		</div>
 
 	</div>
-	<!--======================================================2nd page=======================================================-->
-	<div data-role="page" id="workouts">
+	<!--======================================================Total Body page=======================================================-->
+	<div data-role="page" id="totalbody" data-add-back-btn="true">
 
 		<div data-role="header" data-position="fixed">
 			<h1>Workouts</h1>
@@ -53,14 +67,20 @@
 			<p>Content goes here!</p>
 		</div>
 
-		<div data-role="footer" data-position="fixed">
-			<h4>Footer</h4>
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#gold" data-icon="check">Gold</a></li>
+					<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+					<li><a href="#news" data-icon="star">News</a></li>
+				</ul>
+			</div>
 		</div>
+	</div>
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
-	<script type="text/javascript" src="js/json.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
 
 </body>
 </html>
