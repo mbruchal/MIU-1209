@@ -1,4 +1,8 @@
-<!doctype html>  
+<!doctype html> 
+<!-- Michael Bruchal
+	 MIU Project 2
+	 Term 1209
+	 Add Item Page --> 
 <html lang="en">
 <head>
 
@@ -16,23 +20,34 @@
 	
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link href='http://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Trade+Winds' rel='stylesheet' type='text/css'>
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
-
+	<!--====================================Set Background image======================================-->
+	<style type="text/css">
+		.ui-page{
+	    	background: transparent url(images/weights.jpg) no-repeat center center;
+	    }
+	    h3{
+	    	text-align: center;
+	    }
+	</style>
 </head>
 <body>
-
 	<!--======================================================Home page=======================================================-->
 	<div data-role="page" id="home">
 
 		<div data-role="header" data-position="fixed" data-theme="a">
-			<h1>My Workouts +Goal Tracker</h1>
+			<div>
+				<h3>My Workouts +Goal Tracker</h1>
+			</div>
 		</div>
-		<img src="images/weights.jpg"/>
+		<!--img src="images/weights.jpg" height="250px" width="320px"/-->
 		<div data-role="content">
-			<p><a href="additem.html"  data-ajax="false" data-role="button" data-icon="plus" data-iconpos="right" data-theme="e">Add a new Workout</a></p>
+			<p><a href="additem.html" data-ajax="false" data-role="button" data-icon="plus" data-iconpos="right" data-theme="e">Add a new Workout</a></p>
 			<!--===================Browse Buttons====================-->
 			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e">
 				<li data-role="list-divider" data-theme="a">Explore Exercise Routines</li>
@@ -60,11 +75,16 @@
 	<div data-role="page" id="totalbody" data-add-back-btn="true">
 
 		<div data-role="header" data-position="fixed">
-			<h1>Workouts</h1>
+			<h1>Total Body</h1>
 		</div>
 
 		<div data-role="content">
-			<p>Content goes here!</p>
+			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e">
+				<li><a href="#deadlifts">Deadlifts</a></li>
+				<li><a href="#powerclean">Power Cleans</a></li>
+				<li><a href="#snatch">Snatch</a></li>
+				<li><a href="#overheadsquat">Over Head Squats</a></li>
+			</ul>
 		</div>
 
 		<div data-role="footer" data-position="fixed" data-theme="a">
