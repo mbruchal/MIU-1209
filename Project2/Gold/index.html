@@ -48,16 +48,16 @@
 		</div>
 		<!--img src="images/weights.jpg" height="250px" width="320px"/-->
 		<div data-role="content">
-			<p>This app will save your workout routines, and track your goals as you progress.</p>
-			<a href="additem.html" data-ajax="false" data-role="button" data-icon="plus" data-iconpos="right" data-theme="e">Add a new Workout</a>
+			<p>Save your workout routines, and track your goals as you progress.<a href="additem.html" data-ajax="false" data-inline="true" data-role="button" data-icon="plus" data-iconpos="right" data-theme="e">Add a new Workout</a></p>
+			
 			<!--===================Browse Buttons====================-->
-			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e">
+			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e" data-filter="true">
 				<li data-role="list-divider" data-theme="a">Explore Exercise Routines</li>
 				<li><a href="#beginner">Beginner</a></li>
 				<li><a href="#intermediate">Intermediate</a></li>
 				<li><a href="#advanced">Advanced</a></li>
-				<li><a href="#kettlebell">Kettlebell</a></li>
-				<li><a href="#crossfit">Crossfit</a></li>
+				<li><a href="#mma">MMA Training</a></li>
+				<li><a href="#kettlebell">Kettlebell Training</a></li>
 			</ul>
 		</div>
 		<!--=======================Footer============================-->
@@ -65,9 +65,9 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#info" data-icon="info">Info</a></li>
-					<li><a href="#gold" data-icon="check">Gold</a></li>
+					<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
 					<li><a href="#bronze" data-icon="plus">Bronze</a></li>
-					<li><a href="#news" data-icon="star">News</a></li>
+					<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
 				</ul>
 			</div>
 		</div>
@@ -93,7 +93,7 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#home" data-icon="home">Home</a></li>
-					<li><a href="#gold" data-icon="check">Gold</a></li>
+					<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
 					<li><a href="#bronze" data-icon="plus">Bronze</a></li>
 					<li><a href="#news" data-icon="star">News</a></li>
 				</ul>
@@ -673,6 +673,123 @@
 				<li>Seated Triceps Press: 4 x 8-10</li>
 				<li>Close Grip Bench Press: 4 x 8-10</li>
 				<li>Triceps Pushdowns: 4 x 8-10</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#gold" data-icon="check">Gold</a></li>
+						<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+						<li><a href="#news" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================MMA page=======================================================-->
+	<div data-role="page" id="mma" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>MMA</h3>
+		</div>
+
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e">
+				<li data-role="list-divider" data-theme="a">Randy Couture's Plan</li>
+				<li><a href="#rcwc">Workout Circuit</a></li>
+				<li data-role="list-divider" data-theme="a">Brock Lesnar's Plan</li>
+				<li><a href="#blsw">Strength</a></li>
+				<li><a href="blme">Endurance</a></li>
+			</ul>
+		</div>
+
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+					<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+					<li><a href="#news" data-icon="star">News</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--===================================================rcwc Workout Circuit page======================================================-->
+	<div data-role="page" id="rcwc" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Circuit Plan</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Randy Couture's Circuit Training for Muscular Endurance</h4>
+			<p>Complete this list and rest for 2 minutes. Then complete the list again for a total of 3 times.</p>
+			<fieldset>
+				<li>Bent over rows: x 10</li>
+				<li>Upright Rows: x 10</li>
+				<li>Military Press: x 10</li>
+				<li>Good Morning Bends: x 8</li>
+				<li>Lunges: x 8 per leg</li>
+				<li>Deadlift: x 8</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#gold" data-icon="check">Gold</a></li>
+						<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+						<li><a href="#news" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--===================================================blsw Muscle Workout page======================================================-->
+	<div data-role="page" id="blsw" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Brock's Plan</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Brock Lesnar's Plan For Muscle Development</h4>
+			<p>This is a week long plan 4 days with your choice of 3 days off.</p>
+			<fieldset>
+				<h4>Day 1</h4>
+				<li>Bench Press: 6 x 12</li>
+				<li>Incline Dumbbell Press: 4 x 10</li>
+				<li>Dumbbell Flyes: 3 x 8</li>
+				<li>Cable Crossovers: 3 x 8</li>
+				<li>Triceps Dips: 4 x 10</li>
+				<li>Triceps Pushdowns: 4 x 10</li>
+				<li>Skull Crushers: 3 x 10</li>
+				<h4>Day 2</h4>
+				<li>Wide-Grip Pull-Up: 4 x 6</li>
+				<li>Medium-Grip Pull-Up: 4 x 6</li>
+				<li>Narrow-Grip Pull-Up: 4 x 6</li>
+				<li>Seated Cable Row: 4 x 6</li>
+				<li>Stiff-Legged Deadlift: 4 x 6</li>
+				<li>Deadlift: 4 x 6</li>
+				<li>Preacher Curl: 4 x 12</li>
+				<li>Hammer Curl: 3 x 10</li>
+				<li>Incline Dumbbell Curl 3 x 10</li>
+				<h4>Day 3</h4>
+				<li>Overhead Barbell Press: 4 x 10</li>
+				<li>Seated Dumbbell Press: 3 x 10</li>
+				<li>Dumbbell Front Raise: 3 x 10</li>
+				<li>Dumbbell Lateral Raise: 3 x 10</li>
+				<li>Smith Machine Upright Row: 4 x 6</li>
+				<li>Barbell/Dumbbell Shrug: 4 x 6</li>
+				<h4>Day 4</h4>
+				<li>Leg Extension: 3 x 10</li>
+				<li>Leg Curl: 3 x 10</li>
+				<li>Narrow-Stance Smith Machine Squat: 4 x 6</li>
+				<li>Medium-Stance Smith Machine Squat: 4 x 6</li>
+				<li>Wide-Stance Smith Machine Squat: 4 x 6</li>
+				<li>Leg Press: 4 x 6</li>
+				<li>Stiff-Legged Deadlift: 4 x 6</li>
 			</fieldset>
 
 			<div data-role="footer" data-position="fixed" data-theme="a">
