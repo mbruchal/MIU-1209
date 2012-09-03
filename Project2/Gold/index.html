@@ -30,6 +30,7 @@
 	<style type="text/css">
 		.ui-page{
 	    	background: transparent url(images/weights.jpg) no-repeat center center fixed;
+	    	background-size: cover;
 	    }
 	    h3{
 	    	text-align: center;
@@ -47,7 +48,7 @@
 		</div>
 		<!--img src="images/weights.jpg" height="250px" width="320px"/-->
 		<div data-role="content">
-			<p>This app will help you organize your workout routines, and track your goals as you progress.</p>
+			<p>This app will save your workout routines, and track your goals as you progress.</p>
 			<a href="additem.html" data-ajax="false" data-role="button" data-icon="plus" data-iconpos="right" data-theme="e">Add a new Workout</a>
 			<!--===================Browse Buttons====================-->
 			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e">
@@ -55,15 +56,15 @@
 				<li><a href="#beginner">Beginner</a></li>
 				<li><a href="#intermediate">Intermediate</a></li>
 				<li><a href="#advanced">Advanced</a></li>
-				<li><a href="#bulking">Bulking Up</a></li>
-				<li><a href="#cutting">Cutting Up</a></li>
+				<li><a href="#kettlebell">Kettlebell</a></li>
+				<li><a href="#crossfit">Crossfit</a></li>
 			</ul>
 		</div>
 		<!--=======================Footer============================-->
 		<div data-role="footer" data-position="fixed" data-theme="a">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#search" data-icon="search">Search</a></li>
+					<li><a href="#info" data-icon="info">Info</a></li>
 					<li><a href="#gold" data-icon="check">Gold</a></li>
 					<li><a href="#bronze" data-icon="plus">Bronze</a></li>
 					<li><a href="#news" data-icon="star">News</a></li>
@@ -76,7 +77,7 @@
 	<div data-role="page" id="beginner" data-add-back-btn="true">
 
 		<div data-role="header" data-position="fixed">
-			<h3>Beginner Routines</h3>
+			<h3>Beginners Plan</h3>
 		</div>
 
 		<div data-role="content">
@@ -107,29 +108,585 @@
 		</div>
 
 		<div data-role="content">
-			<h4>Day 1 Total</h4>
-			<p>System is total but will vary. Warm up with 5 minutes of stretching.</p>
-			<li>Prone Triceps (Skull Crushers): 3 x 12 superset with:</li>
-			<li>Barbell curls: 3 x 12+ if possible</li>
-			<li>Flat bench presses: 3 x 12/15 superset with:</li>
-			<li>Single arm rows: 3 x 10/12</li>
-			<li>Squats: 3 x 15/20</li>
-			<li>Press behind the neck: 3 x 12/15 superset with:</li>
-			<li>Barbell shrugs: 3 x 8/10</li>
+			<h4>System is total but will vary. Warm up with 5 minutes of stretching.</h4>
+			<fieldset>
+				<li>Prone Triceps (Skull Crushers): 3 x 12 superset with:</li>
+				<li>Barbell curls: 3 x 12+ if possible</li>
+				<li>Flat bench presses: 3 x 12/15 superset with:</li>
+				<li>Single arm rows: 3 x 10/12</li>
+				<li>Squats: 3 x 15/20</li>
+				<li>Press behind the neck: 3 x 12/15 superset with:</li>
+				<li>Barbell shrugs: 3 x 8/10</li>
+			</fieldset>
 			<h4>Abs</h4>
-			<li>Seated barbell twists: 2 minutes</li>
+			<fieldset>
+				<li>Seated barbell twists: 2 minutes</li>
+				<li>Crunches for 2 minutes or failure</li>
+			</fieldset>
 
 			<div data-role="footer" data-position="fixed" data-theme="a">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#home" data-icon="home">Home</a></li>
-					<li><a href="#gold" data-icon="check">Gold</a></li>
-					<li><a href="#bronze" data-icon="plus">Bronze</a></li>
-					<li><a href="#news" data-icon="star">News</a></li>
-				</ul>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#gold" data-icon="check">Gold</a></li>
+						<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+						<li><a href="#news" data-icon="star">News</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
+	</div>
+	<!--======================================================beginner day2 page=======================================================-->
+	<div data-role="page" id="bday2" data-add-back-btn="true">
 
+		<div data-role="header" data-position="fixed">
+			<h3>Beginner Day 2</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Concentrate on warming up well first and drink at least a gallon of water for the day. This group of exercises will flush all toxin residue from vascular system. Concentrate using good form rather than heavy weight.</h4>
+			<fieldset>
+				<li>Barbell curls: 3 x 15</li>
+				<li>close grip bench presses: 3 x 20</li>
+				<li>Good morning bends: 3 x 15</li>
+				<li>Squat just the bar and no additional weight: 3 x 30</li>
+				<li>Flat bench press: 3 x 20</li>
+				<li>Single Arm Rows: 3 x 20</li>
+				<li>Vertical Rows:3 x 12 one arm at a time</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#gold" data-icon="check">Gold</a></li>
+						<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+						<li><a href="#news" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================beginner day3 page=======================================================-->
+	<div data-role="page" id="bday3" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Beginner Day 3</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Attempt to increase your lifting max weight eventhough its only a few pounds. Warm up by treadmill at a 6 minute per mile pace for 10 minutes.</h4>
+			<fieldset>
+				<li>Seated behind the neck shoulder press: 4 x 10</li>
+				<li>Barbell Squats: 4 x 10</li>
+				<li>Incline Bench Press: 4 x 10</li>
+				<li>Heavy Barbell Curls: 4 x 12</li>
+				<li>Tricep Rope Pulldowns: 4 x 12</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#gold" data-icon="check">Gold</a></li>
+						<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+						<li><a href="#news" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================Intermediate page=======================================================-->
+	<div data-role="page" id="intermediate" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Intermediate</h3>
+		</div>
+
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e">
+				<li data-role="list-divider" data-theme="a">4 Day system (Mon, Tue, Thur, and Fri)</li>
+				<li><a href="#mon+tue">Monday and Thursday</a></li>
+				<li><a href="#thu+fri">Thursday and Friday</a></li>
+			</ul>
+			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e">
+				<li data-role="list-divider" data-theme="a">4 Day system (Any 2 days on 2 days off)</li>
+				<li><a href="#iday1+3">Days 1 and 3</a></li>
+				<li><a href="#iday2+4">Days 2 and 4</a></li>
+			</ul>
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#gold" data-icon="check">Gold</a></li>
+						<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+						<li><a href="#news" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================Mon+tue page=======================================================-->
+	<div data-role="page" id="mon+tue" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Mon + Tue</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>These days are all about your shoulders, back, and triceps. Go as heavy as possible in both sets. Warm up for at least 5 minutes.</h4>
+			<fieldset>
+				<li>Seated behind the neck shoulder press: 2 x 8</li>
+				<li>Dumbell lateral raises: 2 x 10</li>
+				<li>Single arm rows: 2 x 10</li>
+				<li>Deadlifts: 2 x 10</li>
+				<li>Dips: 2 x to failure</li>
+				<li>Tricep kickbacks: 2 x 10 one arm at a time</li>
+			</fieldset>
+			<h4>Abs</h4>
+			<fieldset>
+				<li>Crunches: 2 x to failure</li>
+				<li>Decline sit-ups: 2 x to failure</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#gold" data-icon="check">Gold</a></li>
+						<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+						<li><a href="#news" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================Thu+Fri page=======================================================-->
+	<div data-role="page" id="thu+fri" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Thur + Fri</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Legs, Chest, and Biceps. The focus here is going as heavy as possible. By the last rep you should be beyond failure. If your not than your just cheating yourself.</h4>
+			<fieldset>
+				<li>Full Squats: 2 x 10</li>
+				<li>Good morning bends: 2 x 10</li>
+				<li>Standing calf raises: 2 x 12</li>
+				<li>Bench Press: 2 x 10</li>
+				<li>Flat cable flys: 3 x 10</li>
+				<li>Barbell curls: 3 x 10</li>
+				<li>Alternate dumbells curls: 2 x 10</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#gold" data-icon="check">Gold</a></li>
+						<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+						<li><a href="#news" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================iday1+3 page=======================================================-->
+	<div data-role="page" id="iday1+3" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Days 1 and 3</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Legs, Chest, and Biceps. This routine should be done fast with no more than 1 minute rest in between sets.</h4>
+			<fieldset>
+				<li>Box Squats: 3 x 12</li>
+				<li>Dumbell Bench Press: 3 x 12</li>
+				<li>Seated Dumbell Curls: 3 x 10-12</li>
+				<li>Barbell Lunges: 2 x 10</li>
+				<li>Cross Bench Pullovers: 3 x 8</li>
+				<li>Concentration curls: 3 x 10</li>
+			</fieldset>
+			<h4>Abs</h4>
+			<fieldset>
+				<li>Decline Crunches: 2 x to failure</li>
+				<li>Flutter Kicks: 2 x 1 minute each</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#gold" data-icon="check">Gold</a></li>
+						<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+						<li><a href="#news" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================iday2+4 page=======================================================-->
+	<div data-role="page" id="iday2+4" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Days 2 and 4</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Shoulders, Back, and Triceps. Again this routine should be be done in high intensity mode. Complete routine should take no more than 40 minutes.</h4>
+			<fieldset>
+				<li>Shoulder Press Behind the Neck: 3 x 12</li>
+				<li>Bent over Barbell Rows: 3 x 10</li>
+				<li>Triceps Press: 3 x 10</li>
+				<li>Dumbell Lateral Raises: 3 x 10</li>
+				<li>Keystone Deadlifts: 3 x 8</li>
+			</fieldset>
+			<h4>Abs</h4>
+			<fieldset>
+				<li>Barbell Twists: 2 x 1 minute each</li>
+				<li>Sit-ups: 2 x to failure</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#gold" data-icon="check">Gold</a></li>
+						<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+						<li><a href="#news" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================Advanced page=======================================================-->
+	<div data-role="page" id="advanced" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Advanced</h3>
+		</div>
+
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e">
+				<li data-role="list-divider" data-theme="a">5 Day System Option 1</li>
+				<li><a href="#monday">Monday</a></li>
+				<li><a href="#tuesday">Tuesday</a></li>
+				<li><a href="#wednesday">Wednesday</a></li>
+				<li><a href="#thursday">Thursday</a></li>
+				<li><a href="#friday">Friday</a></li>
+			</ul>
+			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e">
+				<li data-role="list-divider" data-theme="a">5 Day System Option 2</li>
+				<li><a href="#mon">Monday</a></li>
+				<li><a href="#tue">Tuesday</a></li>
+				<li><a href="#wed">Wednesday</a></li>
+				<li><a href="#thur">Thursday</a></li>
+				<li><a href="#fri">Friday</a></li>
+			</ul>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#gold" data-icon="check">Gold</a></li>
+						<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+						<li><a href="#news" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================5day #1 Monday page=======================================================-->
+	<div data-role="page" id="monday" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Opt1 Monday</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Shoulders and Legs</h4>
+			<fieldset>
+				<li>Dumbell Lateral Raises: 4 x 10</li>
+				<li>Barbell Squats: 4 x 8|10|10|12</li>
+				<li>Hack Squat: 4 x 10</li>
+				<li>Leg Extensions: 4 x 10</li>
+				<li>Standing Calf Raises: 4 x 12</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#gold" data-icon="check">Gold</a></li>
+						<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+						<li><a href="#news" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================5day #1 Tuesday page=======================================================-->
+	<div data-role="page" id="tuesday" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Opt1 Tuesday</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Shoulders and Chest</h4>
+			<fieldset>
+				<li>Barbell Press Behind the Neck: 4 x 10</li>
+				<li>Bench Press: 4 x 8|10</li>
+				<li>Inclined Flys: 4 x 10</li>
+				<li>Cable Crossovers: 4 x 10</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#gold" data-icon="check">Gold</a></li>
+						<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+						<li><a href="#news" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================5day #1 Wednesday page======================================================-->
+	<div data-role="page" id="wednesday" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Opt1 Wednesday</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Shoulders and Back</h4>
+			<fieldset>
+				<li>Bent over Lateral Raises: 4 x 10</li>
+				<li>Lat Pull-Downs: 4 x 8-10</li>
+				<li>Bent Over Rows: 4 x 8-10</li>
+				<li>Seated Pulley Rows: 4 x 8-10</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#gold" data-icon="check">Gold</a></li>
+						<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+						<li><a href="#news" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================5day #1 Thursday page=======================================================-->
+	<div data-role="page" id="thursday" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Opt1 Thursday</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Triceps and Biceps</h4>
+			<fieldset>
+				<li>Tricep Pushdowns: 4 x 10-12</li>
+				<li>Close Grip Bench Press: 4 x 8-10</li>
+				<li>Seated Behind the Neck Press with EZ bar: 4 x 10</li>
+				<li>Barbell Curls: 4 x 10</li>
+				<li>Seated Alternating Dumbell Curls: 4 x 10</li>
+				<li>Preacher Bar Curls: 4 x 10</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#gold" data-icon="check">Gold</a></li>
+						<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+						<li><a href="#news" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================5day #1 Friday page=======================================================-->
+	<div data-role="page" id="friday" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Opt1 Friday</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Shoulders and Legs</h4>
+			<fieldset>
+				<li>Seated Dumbell Press: 4 x 10</li>
+				<li>Leg Curls: 4 x 8-10</li>
+				<li>Deadlifts: 4 x 10</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#gold" data-icon="check">Gold</a></li>
+						<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+						<li><a href="#news" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================5day #2 Monday page=======================================================-->
+	<div data-role="page" id="mon" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Opt2 Monday</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Calves, Leg Biceps, and Quads</h4>
+			<fieldset>
+				<li>Standing Calf Raises: 5 x 12</li>
+				<li>Stiff Legged Deadlifts: 4 x 6|8|10|10</li>
+				<li>Leg Curls: 4 x 12</li>
+				<li>Squats: 4 x 12|10|8|6</li>
+				<li>Leg Extensions: 4 x 10</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#gold" data-icon="check">Gold</a></li>
+						<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+						<li><a href="#news" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================5day #2 Tuesday page=======================================================-->
+	<div data-role="page" id="tue" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Opt2 Tuesday</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Chest and Abs</h4>
+			<fieldset>
+				<li>Incline Bench Press: 4 x 12|10|8|8</li>
+				<li>Incline Flys: 4 x 12</li>
+				<li>Flat Bench Press: 4 x 10</li>
+				<li>Cable Crossovers: 4 x 10</li>
+				<li>Flat Leg Raises: 3 x 20+</li>
+				<li>Crunches: 3 x Max</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#gold" data-icon="check">Gold</a></li>
+						<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+						<li><a href="#news" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================5day #2 Wednesday page=======================================================-->
+	<div data-role="page" id="wed" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Opt2 Wednesday</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Back, Rear Delts, and Calves</h4>
+			<fieldset>
+				<li>Lat Pull-Downs: 4 x 12|10|8|6</li>
+				<li>Bent Over Rows: 4 x 12|10|8|6</li>
+				<li>Seated Pulley Rows: 4 x 10</li>
+				<li>Bent Over lateral Raises: 5 x 10</li>
+				<li>Standing Calf Raises: 5 x 12+</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#gold" data-icon="check">Gold</a></li>
+						<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+						<li><a href="#news" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================5day #2 Thursday page=======================================================-->
+	<div data-role="page" id="thur" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Opt2 Thursday</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Shoulders and Hamstrings</h4>
+			<fieldset>
+				<li>Seated Press Behind Neck: 4 x 12|10|8|6</li>
+				<li>Dumbell Lateral Raises: 4 x 12</li>
+				<li>Seated Front Barbell Press: 4 x 10|12</li>
+				<li>Leg Curls: 4 x 10|12</li>
+				<li>Deadlifts: 4 x 10</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#gold" data-icon="check">Gold</a></li>
+						<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+						<li><a href="#news" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================5day #2 Friday page=======================================================-->
+	<div data-role="page" id="fri" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Opt2 Friday</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Arms</h4>
+			<fieldset>
+				<li>Barbell Curl: 4 x 12|10|8|6</li>
+				<li>Seated Alternate Dumbell Curls: 4 x 8-10</li>
+				<li>EZ Preacher Curls: 3 x 10</li>
+				<li>Seated Triceps Press: 4 x 8-10</li>
+				<li>Close Grip Bench Press: 4 x 8-10</li>
+				<li>Triceps Pushdowns: 4 x 8-10</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#gold" data-icon="check">Gold</a></li>
+						<li><a href="#bronze" data-icon="plus">Bronze</a></li>
+						<li><a href="#news" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>

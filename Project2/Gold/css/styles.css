@@ -47,6 +47,7 @@ h3{
 }
 h4{
 	color: yellow;
+	margin-top: 10px;
 }
 nav{
 	text-align: center;
@@ -88,6 +89,7 @@ p{
 	margin: 1.5em auto;
 	margin-top: 50px;
 	text-align: center;
+	font-size: 17px;
 }
 legend{
 	font-family: 'Trade Winds', cursive;
@@ -114,7 +116,7 @@ li{
 	display: block;
 	font-family: 'Black Ops One', cursive;
 	color: white;
-	line-height: 30px;
+	line-height: 25px;
 }
 input[type='range'] { 
 	-webkit-appearance: none;
@@ -175,7 +177,6 @@ div ul{
 #browselinks{
 	margin-left: 25px;
 }
-
 
 
 
