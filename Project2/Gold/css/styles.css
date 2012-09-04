@@ -177,8 +177,12 @@ div ul{
 #browselinks{
 	margin-left: 25px;
 }
-#blsw.fieldset{margin-left: -20px;}
-
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-myapp-45p {
+		background-image: url("images/45plate.png");
+		background-size: 18px 18px;
+	}
+}
 
 
 
