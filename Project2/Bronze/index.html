@@ -48,18 +48,34 @@
 		</div>
 		<!--img src="images/weights.jpg" height="250px" width="320px"/-->
 		<div data-role="content">
-			<p>Save your workout routines, and track your goals as you progress.<a href="additem.html" data-ajax="false" data-inline="true" data-role="button" data-icon="plus" data-iconpos="right" data-theme="e">Add a new Workout</a></p>
+			<p>Save your workout routines, and track your goals as you progress.<a href="additem.html" data-ajax="false" data-inline="true" data-role="button" data-icon="plus" data-iconpos="right" data-theme="a">Add a new Workout</a></p>
 			
 			<!--===================Browse Buttons====================-->
-			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e" data-filter="true">
-				<li data-role="list-divider" data-theme="a">Explore Exercise Routines</li>
-				<li><a href="#beginner"><img src="images/25plate.png" alt="25">Beginner</a></li>
-				<li><a href="#intermediate"><img src="images/35plate.png" alt="35">Intermediate</a></li>
-				<li><a href="#advanced"><img src="images/45plate.png" alt="45">Advanced</a></li>
-				<li data-role="list-divider" data-theme="a">Specialty Exercise Routines</li>
-				<li><a href="#mma"><img src="images/mmaglove.png" alt="mma">MMA Training</a></li>
-				<li><a href="#kettlebell"><img src="images/kettlebell.png" alt="kettlebell">Kettlebell Training</a></li>
-			</ul>
+			<!--ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e" data-filter="true">
+				<li data-role="list-divider" data-theme="a">Explore Exercise Routines</li-->
+					<h4>Explore Workout Routines</h4>
+				<div class="ui-grid-b">
+					<div class="ui-block-a">
+						<div class="ui-bar-a"><a href="#beginner">Beginner<img src="images/25plate.png" alt="25"></a></div>
+					</div>
+					<div class="ui-block-b">
+						<div class="ui-bar-a"><a href="#intermediate">Intermediate<img src="images/35plate.png" alt="35"></a></div>
+					</div>
+					<div class="ui-block-c">
+						<div class="ui-bar-a"><a href="#advanced">Advanced<img src="images/45plate.png" alt="45"></a></div>
+					</div>
+				</div>
+				<!--li data-role="list-divider" data-theme="a">Specialty Exercise Routines</li-->
+				<h4>Specialty Exercise</h4>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<div class="ui-bar-a"><a href="#mma"><img src="images/mmaglove.png" alt="mma">MMA</a></div>
+					</div>
+					<div class="ui-block-b">
+						<div class="ui-bar-a"><a href="#kettlebell"><img src="images/kettlebell.png" alt="kettlebell">Kettlebell</a></div>
+					</div>
+				</div>
+			<!--/ul-->
 		</div>
 		<!--=======================Footer============================-->
 		<div data-role="footer" data-position="fixed" data-theme="a">
@@ -80,13 +96,49 @@
 			<h3>Beginners Plan</h3>
 		</div>
 
-		<div data-role="content">
-			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e">
-				<li data-role="list-divider" data-theme="a">3 Day System</li>
-				<li><a href="#bday1">Day #1</a></li>
-				<li><a href="#bday2">Day #2</a></li>
-				<li><a href="#bday3">Day #3</a></li>
-			</ul>
+		<div data-role="collapsible-set">
+			<div data-role="collapsible" data-collapse="true" data-theme="a">
+				<h3>Day 1</h3>
+				<h4>System is total but will vary. Warm up with 5 minutes of stretching.</h4>
+				<fieldset>
+					<li>Prone Triceps (Skull Crushers): 3 x 12 superset with:</li>
+					<li>Barbell curls: 3 x 12+ if possible</li>
+					<li>Flat bench presses: 3 x 12/15 superset with:</li>
+					<li>Single arm rows: 3 x 10/12</li>
+					<li>Squats: 3 x 15/20</li>
+					<li>Press behind the neck: 3 x 12/15 superset with:</li>
+					<li>Barbell shrugs: 3 x 8/10</li>
+				</fieldset>
+				<h4>Abs</h4>
+				<fieldset>
+					<li>Seated barbell twists: 2 minutes</li>
+					<li>Crunches for 2 minutes or failure</li>
+				</fieldset>
+			</div>
+			<div data-role="collapsible" data-collapse="true" data-theme="a">
+				<h3>Day 2</h3>
+				<h4>Concentrate on warming up well first and drink at least a gallon of water for the day. This group of exercises will flush all toxin residue from vascular system. Concentrate using good form rather than heavy weight.</h4>
+				<fieldset>
+					<li>Barbell curls: 3 x 15</li>
+					<li>close grip bench presses: 3 x 20</li>
+					<li>Good morning bends: 3 x 15</li>
+					<li>Squat just the bar and no additional weight: 3 x 30</li>
+					<li>Flat bench press: 3 x 20</li>
+					<li>Single Arm Rows: 3 x 20</li>
+					<li>Vertical Rows:3 x 12 one arm at a time</li>
+				</fieldset>
+			</div>
+			<div data-role="collapsible" data-collapse="true" data-theme="a">
+				<h3>Day 3</h3>
+				<h4>Attempt to increase your lifting max weight eventhough its only a few pounds. Warm up by treadmill at a 6 minute per mile pace for 10 minutes.</h4>
+				<fieldset>
+					<li>Seated behind the neck shoulder press: 4 x 10</li>
+					<li>Barbell Squats: 4 x 10</li>
+					<li>Incline Bench Press: 4 x 10</li>
+					<li>Heavy Barbell Curls: 4 x 12</li>
+					<li>Tricep Rope Pulldowns: 4 x 12</li>
+				</fieldset>
+			</div>
 		</div>
 
 		<div data-role="footer" data-position="fixed" data-theme="a">
@@ -101,7 +153,7 @@
 		</div>
 	</div>
 	<!--======================================================beginner day1 page=======================================================-->
-	<div data-role="page" id="bday1" data-add-back-btn="true">
+	<!--div data-role="page" id="bday1" data-add-back-btn="true">
 
 		<div data-role="header" data-position="fixed">
 			<h3>Beginner Day 1</h3>
@@ -137,7 +189,7 @@
 		</div>
 	</div>
 	<!--======================================================beginner day2 page=======================================================-->
-	<div data-role="page" id="bday2" data-add-back-btn="true">
+	<!--div data-role="page" id="bday2" data-add-back-btn="true">
 
 		<div data-role="header" data-position="fixed">
 			<h3>Beginner Day 2</h3>
@@ -168,7 +220,7 @@
 		</div>
 	</div>
 	<!--======================================================beginner day3 page=======================================================-->
-	<div data-role="page" id="bday3" data-add-back-btn="true">
+	<!--div data-role="page" id="bday3" data-add-back-btn="true">
 
 		<div data-role="header" data-position="fixed">
 			<h3>Beginner Day 3</h3>
@@ -195,7 +247,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div-->
 	<!--======================================================Intermediate page=======================================================-->
 	<div data-role="page" id="intermediate" data-add-back-btn="true">
 
@@ -875,15 +927,20 @@
 		</div>
 
 		<div data-role="content">
-			<h4>This exercise should be done 2 times per week for no more than 10 minutes total.</h4>
-			<fieldset>
-				<li>Kettle Swings: 1 minute per arm</li>
-				<li>Kettle Squat: 20 x per arm</li>
-				<li>Kettle Snatch: 10 x per arm</li>
-				<li>Kettle Windmills: 10 x per side</li>
-				<li>Flat Kettle Presses: 10 x per arm</li>
-				<li>Kettle Swings: 1 minute per arm.</li>
-			</fieldset>
+			<div data-role="collapsible-set">
+				<div data-role="collapsible" data-collapse="true" data-theme="a">
+					<h3>Kettlebell</h3>
+					<h4>This exercise should be done 2 times per week for no more than 10 minutes total.</h4>
+					<fieldset>
+						<li>Kettle Swings: 1 minute per arm</li>
+						<li>Kettle Squat: 20 x per arm</li>
+						<li>Kettle Snatch: 10 x per arm</li>
+						<li>Kettle Windmills: 10 x per side</li>
+						<li>Flat Kettle Presses: 10 x per arm</li>
+						<li>Kettle Swings: 1 minute per arm.</li>
+					</fieldset>
+				</div>
+			</div>
 
 			<div data-role="footer" data-position="fixed" data-theme="a">
 				<div data-role="navbar">
@@ -900,6 +957,5 @@
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
-
 </body>
 </html>
