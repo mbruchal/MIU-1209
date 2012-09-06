@@ -51,7 +51,9 @@
 			<p>Save your workout routines, and track your goals as you progress.<a href="additem.html" data-ajax="false" data-inline="true" data-role="button" data-icon="plus" data-iconpos="right" data-theme="e">Add a new Workout</a></p>
 			
 			<!--===================Browse Buttons====================-->
-			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e" data-filter="true">
+			<li id="select"><label for="group">Search Saved Workouts By Category:</label></li>
+			<input type="button" data-theme="a" data-ajax="false" value="Search" id="searchBtn"/><br/>
+			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e">
 				<li data-role="list-divider" data-theme="a">Explore Exercise Routines</li>
 				<li><a href="#beginner"><img src="images/25plate.png" alt="25">Beginner</a></li>
 				<li><a href="#intermediate"><img src="images/35plate.png" alt="35">Intermediate</a></li>
@@ -900,6 +902,7 @@
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
-
+	<script src="js/json.js" type="text/javascript"></script>
+	<script src="js/main.js" type="text/javascript"></script>
 </body>
 </html>

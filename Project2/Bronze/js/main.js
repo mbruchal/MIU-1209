@@ -1,7 +1,7 @@
 /* Michael Bruchal
-   17AUG2012
-   VFW 1208
-   Project 4
+   09SEP2012
+   MIU 1209
+   Project 2
 */
 
 //Wait until the DOM is ready.
@@ -302,4 +302,46 @@ window.addEventListener("DOMContentLoaded", function() {
 	clearLink.addEventListener("click", clearLocal);
 	var save = $("submit");
 	save.addEventListener("click", validate);
+	
+
+	//Search
+	var search = $("searchBtn");
+	search.addEventListener("click", getSearch);
+
+	var getSearch = function(){
+
+		var category = $("groups").value;
+		var term = $("search").value;
+
+		//Search by Category Only
+		if(category != "--Choose A Workout--" && term === ""){
+			for(i=0, j=localStorage.length; i<j; i++){
+				var key = localStorage.key(i);
+				var value = localStorage.getItem(key);
+				var obj = JSON.parse(value);
+				if(category === obj.group[1]){
+					for (n in obj){
+						console.log(obj[n][1]);
+					}
+				} 
+			}
+		}
+		//Search by Term Only
+		/*if(term !== "" && category === "--Choose A Group--"){
+
+		}
+		//Search by BOTH Category AND Term
+		/*if(term != "" && category != "--Choose A Group--"){
+			for(i=0, j=localStorage.length; i<j; i++){
+				var key = localStorage.key(i);
+				var value = localStorage.getItem(key);
+				var obj = JSON.parse(value);
+				for (n in obj){
+
+				}
+			}
+		}*/
+	};
+
+
 });
