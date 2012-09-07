@@ -305,7 +305,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	
 
 	//Search
-	/*var search = $("searchBtn");
+	var search = $("searchBtn");
 	search.addEventListener("click", getSearch);
 
 	var getSearch = function(){
@@ -327,7 +327,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			}
 		}
 		//Search by Term Only
-		if(term !== "" && category === "--Choose A Group--"){
+		/*if(term !== "" && category === "--Choose A Group--"){
 
 		}
 		//Search by BOTH Category AND Term
