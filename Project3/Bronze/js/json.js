@@ -1,0 +1,272 @@
+/* Michael Bruchal
+   17AUG2012
+   VFW 1208
+   Project 4
+*/
+
+var json = {
+	"workout1": {
+		"date": ["Date Added:", "2012-08-17"],
+		"group": ["Workout Type:", "Chest"],
+		"intensity": ["Intensity Level?", "9"],
+		"NumOfDays": ["Number Of Days Per Week:", "3"],
+		"mins": ["Duration Of Exercise:", "15 Mins"],
+		"notes": ["Additional Notes:", "Barbell and Bench"],
+		"bmi": ["BMI:", "24"],
+		"BodyFat": ["Body Fat%", "10"],
+		"CurrentWeight": ["Current Weight?", "199"],
+		"TargetWeight": ["Target Weight?", "210"]
+	},
+	"workout2": {
+		"date": ["Date Added:", "2012-08-18"],
+		"group": ["Workout Type:", "Legs"],
+		"intensity": ["Intensity Level?", "7"],
+		"NumOfDays": ["Number Of Days Per Week:", "2"],
+		"mins": ["Duration Of Exercise:", "30 Mins"],
+		"notes": ["Additional Notes:", "Squats"],
+		"bmi": ["BMI:", "24"],
+		"BodyFat": ["Body Fat%", "9"],
+		"CurrentWeight": ["Current Weight?", "205"],
+		"TargetWeight": ["Target Weight?", "210"]
+	},
+	"workout3": {
+		"date": ["Date Added:", "2012-08-19"],
+		"group": ["Workout Type:", "Cardio"],
+		"intensity": ["Intensity Level?", "10"],
+		"NumOfDays": ["Number Of Days Per Week:", "1"],
+		"mins": ["Duration Of Exercise:", "45 Mins"],
+		"notes": ["Additional Notes:", "4 miles"],
+		"bmi": ["BMI:", "24"],
+		"BodyFat": ["Body Fat%", "11"],
+		"CurrentWeight": ["Current Weight?", "208"],
+		"TargetWeight": ["Target Weight?", "210"]
+	},
+	"workout4": {
+		"date": ["Date Added:", "2012-08-20"],
+		"group": ["Workout Type:", "Shoulders"],
+		"intensity": ["Intensity Level?", "4"],
+		"NumOfDays": ["Number Of Days Per Week:", "2"],
+		"mins": ["Duration Of Exercise:", "45 Mins"],
+		"notes": ["Additional Notes:", "Shrugs, Presses"],
+		"bmi": ["BMI:", "24"],
+		"BodyFat": ["Body Fat%", "9"],
+		"CurrentWeight": ["Current Weight?", "208"],
+		"TargetWeight": ["Target Weight?", "210"]
+	},
+	"workout5": {
+		"date": ["Date Added:", "2012-08-21"],
+		"group": ["Workout Type:", "back"],
+		"intensity": ["Intensity Level?", "8"],
+		"NumOfDays": ["Number Of Days Per Week:", "2"],
+		"mins": ["Duration Of Exercise:", "45 Mins"],
+		"notes": ["Additional Notes:", "Rows and pull ups"],
+		"bmi": ["BMI:", "25"],
+		"BodyFat": ["Body Fat%", "10"],
+		"CurrentWeight": ["Current Weight?", "209"],
+		"TargetWeight": ["Target Weight?", "210"]
+	},
+	"workout6": {
+		"date": ["Date Added:", "2012-08-22"],
+		"group": ["Workout Type:", "Arms"],
+		"intensity": ["Intensity Level?", "10"],
+		"NumOfDays": ["Number Of Days Per Week:", "1"],
+		"mins": ["Duration Of Exercise:", "45 Mins"],
+		"notes": ["Additional Notes:", "Curls and close grip presses"],
+		"bmi": ["BMI:", "24"],
+		"BodyFat": ["Body Fat%", "11"],
+		"CurrentWeight": ["Current Weight?", "209"],
+		"TargetWeight": ["Target Weight?", "210"]
+	},
+	"workout7": {
+		"date": ["Date Added:", "2012-08-23"],
+		"group": ["Workout Type:", "BattleRopes"],
+		"intensity": ["Intensity Level?", "6"],
+		"NumOfDays": ["Number Of Days Per Week:", "2"],
+		"mins": ["Duration Of Exercise:", "45 Mins"],
+		"notes": ["Additional Notes:", "Abs"],
+		"bmi": ["BMI:", "23"],
+		"BodyFat": ["Body Fat%", "9"],
+		"CurrentWeight": ["Current Weight?", "209"],
+		"TargetWeight": ["Target Weight?", "210"]
+	},
+	"workout8": {
+		"date": ["Date Added:", "2012-08-24"],
+		"group": ["Workout Type:", "Chest"],
+		"intensity": ["Intensity Level?", "10"],
+		"NumOfDays": ["Number Of Days Per Week:", "1"],
+		"mins": ["Duration Of Exercise:", "15 Mins"],
+		"notes": ["Additional Notes:", "Dumbells"],
+		"bmi": ["BMI:", "24"],
+		"BodyFat": ["Body Fat%", "10"],
+		"CurrentWeight": ["Current Weight?", "211"],
+		"TargetWeight": ["Target Weight?", "210"]
+	},
+	"workout9": {
+		"date": ["Date Added:", "2012-08-25"],
+		"group": ["Workout Type:", "StationaryBike"],
+		"intensity": ["Intensity Level?", "5"],
+		"NumOfDays": ["Number Of Days Per Week:", "1"],
+		"mins": ["Duration Of Exercise:", "30 Mins"],
+		"notes": ["Additional Notes:", "2 miles"],
+		"bmi": ["BMI:", "24"],
+		"BodyFat": ["Body Fat%", "10"],
+		"CurrentWeight": ["Current Weight?", "211"],
+		"TargetWeight": ["Target Weight?", "210"]
+	},
+	"workout10": {
+		"date": ["Date Added:", "2012-08-26"],
+		"group": ["Workout Type:", "JumpRope"],
+		"intensity": ["Intensity Level?", "9"],
+		"NumOfDays": ["Number Of Days Per Week:", "1"],
+		"mins": ["Duration Of Exercise:", "15 Mins"],
+		"notes": ["Additional Notes:", "1 minute on 1 minute off"],
+		"bmi": ["BMI:", "25"],
+		"BodyFat": ["Body Fat%", "12"],
+		"CurrentWeight": ["Current Weight?", "212"],
+		"TargetWeight": ["Target Weight?", "210"]
+	},
+	"workout11": {
+		"date": ["Date Added:", "2012-08-27"],
+		"group": ["Workout Type:", "Legs"],
+		"intensity": ["Intensity Level?", "10"],
+		"NumOfDays": ["Number Of Days Per Week:", "1"],
+		"mins": ["Duration Of Exercise:", "30 Mins"],
+		"notes": ["Additional Notes:", "Squats"],
+		"bmi": ["BMI:", "24"],
+		"BodyFat": ["Body Fat%", "10"],
+		"CurrentWeight": ["Current Weight?", "212"],
+		"TargetWeight": ["Target Weight?", "210"]
+	},
+	"workout12": {
+		"date": ["Date Added:", "2012-08-28"],
+		"group": ["Workout Type:", "Chest"],
+		"intensity": ["Intensity Level?", "10"],
+		"NumOfDays": ["Number Of Days Per Week:", "2"],
+		"mins": ["Duration Of Exercise:", "45 Mins"],
+		"notes": ["Additional Notes:", "Barbell presses"],
+		"bmi": ["BMI:", "24"],
+		"BodyFat": ["Body Fat%", "10"],
+		"CurrentWeight": ["Current Weight?", "213"],
+		"TargetWeight": ["Target Weight?", "210"]
+	},
+	"workout13": {
+		"date": ["Date Added:", "2012-08-29"],
+		"group": ["Workout Type:", "Back"],
+		"intensity": ["Intensity Level?", "7"],
+		"NumOfDays": ["Number Of Days Per Week:", "2"],
+		"mins": ["Duration Of Exercise:", "15 Mins"],
+		"notes": ["Additional Notes:", "Deadlifts"],
+		"bmi": ["BMI:", "24"],
+		"BodyFat": ["Body Fat%", "10"],
+		"CurrentWeight": ["Current Weight?", "212"],
+		"TargetWeight": ["Target Weight?", "210"]
+	},
+	"workout14": {
+		"date": ["Date Added:", "2012-08-30"],
+		"group": ["Workout Type:", "StationaryBike"],
+		"intensity": ["Intensity Level?", "5"],
+		"NumOfDays": ["Number Of Days Per Week:", "2"],
+		"mins": ["Duration Of Exercise:", "15 Mins"],
+		"notes": ["Additional Notes:", "4 miles"],
+		"bmi": ["BMI:", "22"],
+		"BodyFat": ["Body Fat%", "11"],
+		"CurrentWeight": ["Current Weight?", "211"],
+		"TargetWeight": ["Target Weight?", "210"]
+	},
+	"workout15": {
+		"date": ["Date Added:", "2012-08-31"],
+		"group": ["Workout Type:", "Arms"],
+		"intensity": ["Intensity Level?", "10"],
+		"NumOfDays": ["Number Of Days Per Week:", "1"],
+		"mins": ["Duration Of Exercise:", "45 Mins"],
+		"notes": ["Additional Notes:", "Barbell curls"],
+		"bmi": ["BMI:", "24"],
+		"BodyFat": ["Body Fat%", "10"],
+		"CurrentWeight": ["Current Weight?", "212"],
+		"TargetWeight": ["Target Weight?", "210"]
+	},
+	"workout16": {
+		"date": ["Date Added:", "2012-09-01"],
+		"group": ["Workout Type:", "Shoulders"],
+		"intensity": ["Intensity Level?", "6"],
+		"NumOfDays": ["Number Of Days Per Week:", "2"],
+		"mins": ["Duration Of Exercise:", "30 Mins"],
+		"notes": ["Additional Notes:", "Barbell Presses"],
+		"bmi": ["BMI:", "23"],
+		"BodyFat": ["Body Fat%", "12"],
+		"CurrentWeight": ["Current Weight?", "213"],
+		"TargetWeight": ["Target Weight?", "210"]
+	},
+	"workout15": {
+		"date": ["Date Added:", "2012-09-02"],
+		"group": ["Workout Type:", "BattleRopes"],
+		"intensity": ["Intensity Level?", "10"],
+		"NumOfDays": ["Number Of Days Per Week:", "1"],
+		"mins": ["Duration Of Exercise:", "15 Mins"],
+		"notes": ["Additional Notes:", "Abs"],
+		"bmi": ["BMI:", "24"],
+		"BodyFat": ["Body Fat%", "10"],
+		"CurrentWeight": ["Current Weight?", "211"],
+		"TargetWeight": ["Target Weight?", "210"]
+	},
+	"workout16": {
+		"date": ["Date Added:", "2012-09-03"],
+		"group": ["Workout Type:", "Chest"],
+		"intensity": ["Intensity Level?", "4"],
+		"NumOfDays": ["Number Of Days Per Week:", "1"],
+		"mins": ["Duration Of Exercise:", "45 Mins"],
+		"notes": ["Additional Notes:", "Push ups"],
+		"bmi": ["BMI:", "23"],
+		"BodyFat": ["Body Fat%", "10"],
+		"CurrentWeight": ["Current Weight?", "211"],
+		"TargetWeight": ["Target Weight?", "210"]
+	},
+	"workout17": {
+		"date": ["Date Added:", "2012-09-04"],
+		"group": ["Workout Type:", "Cardio"],
+		"intensity": ["Intensity Level?", "8"],
+		"NumOfDays": ["Number Of Days Per Week:", "1"],
+		"mins": ["Duration Of Exercise:", "30 Mins"],
+		"notes": ["Additional Notes:", "3 miles"],
+		"bmi": ["BMI:", "23"],
+		"BodyFat": ["Body Fat%", "9"],
+		"CurrentWeight": ["Current Weight?", "211"],
+		"TargetWeight": ["Target Weight?", "210"]
+	},
+	"workout18": {
+		"date": ["Date Added:", "2012-09-05"],
+		"group": ["Workout Type:", "Back"],
+		"intensity": ["Intensity Level?", "10"],
+		"NumOfDays": ["Number Of Days Per Week:", "1"],
+		"mins": ["Duration Of Exercise:", "45 Mins"],
+		"notes": ["Additional Notes:", "Pull ups"],
+		"bmi": ["BMI:", "24"],
+		"BodyFat": ["Body Fat%", "11"],
+		"CurrentWeight": ["Current Weight?", "210"],
+		"TargetWeight": ["Target Weight?", "210"]
+	},
+	"workout19": {
+		"date": ["Date Added:", "2012-09-06"],
+		"group": ["Workout Type:", "StationaryBike"],
+		"intensity": ["Intensity Level?", "10"],
+		"NumOfDays": ["Number Of Days Per Week:", "1"],
+		"mins": ["Duration Of Exercise:", "45 Mins"],
+		"notes": ["Additional Notes:", "4 miles"],
+		"bmi": ["BMI:", "24"],
+		"BodyFat": ["Body Fat%", "10"],
+		"CurrentWeight": ["Current Weight?", "210"],
+		"TargetWeight": ["Target Weight?", "210"]
+	},
+	"workout20": {
+		"date": ["Date Added:", "2012-09-07"],
+		"group": ["Workout Type:", "Legs"],
+		"intensity": ["Intensity Level?", "10"],
+		"NumOfDays": ["Number Of Days Per Week:", "1"],
+		"mins": ["Duration Of Exercise:", "45 Mins"],
+		"notes": ["Additional Notes:", "Squats"],
+		"bmi": ["BMI:", "24"],
+		"BodyFat": ["Body Fat%", "9"],
+		"CurrentWeight": ["Current Weight?", "210"],
+		"TargetWeight": ["Target Weight?", "210"]
+	}
+}

@@ -1,0 +1,191 @@
+/* Michael Bruchal
+   01SEP2012
+   MIU 1209
+   Project 2
+*/
+
+body{
+	font-family: Arial, Helvetica, Verdana, sans-serif; 
+	background: url(images/weights.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	background size: cover;
+	height: 100%;
+	margin: 0;
+	background-attachment: fixed;
+	}
+h1{
+	font-family: 'Trade Winds', cursive;
+	background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 553, color-stop(0, #FFFFFF), color-stop(1, #999697));
+	color: red;
+	text-shadow:
+		3px 3px 0 white,
+		-1px -1px 0 white,
+		1px -1px 0 white,
+		-1px 1px 0 white,
+		1px 1px 0 white;
+	font-size: 23px;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: -1px;
+}
+h3{
+	font-family: 'Trade Winds', cursive;
+	/*background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 553, color-stop(0, #FFFFFF), color-stop(1, #999697));*/
+	color: red;
+	text-shadow:
+		3px 3px 0 white,
+		-1px -1px 0 white,
+		1px -1px 0 white,
+		-1px 1px 0 white,
+		1px 1px 0 white;
+	/*font-size: 50px;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-top: -1px;*/
+}
+h4{
+	color: yellow;
+	margin-top: 10px;
+	background-color: black;
+}
+nav{
+	text-align: center;
+}
+a{
+	color: white;
+}
+/*a{
+  -webkit-border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-user-select: none;
+  background: -webkit-linear-gradient(#fafafa, #f4f4f4 40%, #e5e5e5);
+  border: 1px solid #aaa;
+  color: #444;
+  font-size: inherit;
+  margin-bottom: 0px;
+  min-width: 4em;
+  padding: 3px 12px 3px 12px;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+a:hover {
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  background: #ebebeb -webkit-linear-gradient(#fefefe, #f8f8f8 40%, #e9e9e9);
+  border-color: #999;
+  color: #222;
+  text-decoration: none;
+}
+a:active {
+  -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.2);
+  background: #ebebeb -webkit-linear-gradient(#f4f4f4, #efefef 40%, #dcdcdc);
+  color: #333;
+  text-decoration: none;
+}*/
+p{
+	font-family: 'Black Ops One', cursive;
+	color: white;
+	background-color: black;
+	margin: 1.5em auto;
+	margin-top: 50px;
+	text-align: center;
+	font-size: 17px;
+}
+legend{
+	font-family: 'Trade Winds', cursive;
+	font-size: x-large;
+	text-align: center;
+	color: red;
+	text-shadow:
+		3px 3px 0 #000,
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+fieldset{
+	background: url(images/transparent_gradient.png) no-repeat;
+	word-wrap:normal;
+	border-color: red;
+	border-style: inset;
+	margin: 5px;
+	margin-top: 20px;
+}
+li{
+	margin-left: -10px;
+	display: block;
+	font-family: 'Black Ops One', cursive;
+	color: white;
+	line-height: 25px;
+}
+input[type='range'] { 
+	-webkit-appearance: none;
+	border-style: inset;
+	border-color: red;
+	background-color: black;
+}
+label{
+	font-family: 'Black Ops One', cursive;
+	line-height: 30px;
+	color: white;
+}
+#items{
+	margin-top: 10px;
+	border-color: red;
+	border-style: inset;
+	background-image: -webkit-gradient(linear, right top, left top, color-stop(0, #999697), color-stop(1, #000000));
+}
+#start{
+	margin-left: 80px;
+}
+#clearData{
+	margin-right: 30px;
+}
+#fields{
+	color: yellow;
+	margin-left: 20px;
+}
+#rangevalue{
+	border-color: red;
+	border-style: inset;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 3px;
+}
+div ul{
+	border-bottom: solid white 1px;
+	margin-bottom: 30px;
+	padding-bottom: 20px;
+}
+#additemlink{
+	margin-bottom: 20px;
+}
+#browsetext{
+	color: red;
+	text-align: left;
+}
+#search{
+	text-align: right;
+	margin-top: -45px;
+	margin-bottom: 15px;
+}
+#searchsubmit{
+	border-style: inset;
+	border-color: red;
+	background-color: white;
+}
+#browselinks{
+	margin-left: 25px;
+}
+#home a{
+	color: white;
+}
+#home a:hover{
+	color: red;
+}
+
+
+
+
+

@@ -1,0 +1,939 @@
+<!doctype html> 
+<!-- Michael Bruchal
+	 MIU Project 2
+	 Term 1209
+	 Add Item Page --> 
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>My Workouts +Goal Tracker</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link href='http://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Trade+Winds' rel='stylesheet' type='text/css'>
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+	<!--====================================Set Background image======================================-->
+	<style type="text/css">
+		.ui-page{
+			background: #484848;
+		}
+	    h3{
+	    	text-align: center;
+	    }
+	</style>
+</head>
+<body>
+	<!--======================================================Home page=======================================================-->
+	<div data-role="page" id="home">
+
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<div>
+				<h3>My Workouts +Goal Tracker</h3>
+			</div>
+		</div>
+		<!--img src="images/weights.jpg" height="250px" width="320px"/-->
+		<div data-role="content">
+			<p><img src="images/weights.jpg" width="340" height="200"/>Save your workout routines, and track your goals as you progress.<a href="#additem" data-ajax="false" data-inline="true" data-role="button" data-icon="plus" data-iconpos="right" data-theme="e">Add a new Workout</a></p>
+			
+			<!--===================Browse Buttons====================-->
+			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e">
+				<li data-role="list-divider" data-theme="a">Explore Exercise Routines</li>
+				<li><a href="#beginner"><img src="images/25plate.png" alt="25">Beginner</a></li>
+				<li><a href="#intermediate"><img src="images/35plate.png" alt="35">Intermediate</a></li>
+				<li><a href="#advanced"><img src="images/45plate.png" alt="45">Advanced</a></li>
+				<li data-role="list-divider" data-theme="a">Specialty Exercise Routines</li>
+				<li><a href="#mma"><img src="images/mmaglove.png" alt="mma">MMA Training</a></li>
+				<li><a href="#kettlebell"><img src="images/kettlebell.png" alt="kettlebell">Kettlebell Training</a></li>
+			</ul>
+		</div>
+		<!--=======================Footer============================-->
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#info" data-icon="info">Info</a></li>
+					<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+					<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+					<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--======================================================Beginner page=======================================================-->
+	<div data-role="page" id="beginner" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Beginners Plan</h3>
+		</div>
+
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e">
+				<li data-role="list-divider" data-theme="a">3 Day System</li>
+				<li><a href="#bday1">Day #1</a></li>
+				<li><a href="#bday2">Day #2</a></li>
+				<li><a href="#bday3">Day #3</a></li>
+			</ul>
+		</div>
+
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+					<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+					<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--======================================================beginner day1 page=======================================================-->
+	<div data-role="page" id="bday1" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Beginner Day 1</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>System is total but will vary. Warm up with 5 minutes of stretching.</h4>
+			<fieldset>
+				<li>Prone Triceps (Skull Crushers): 3 x 12 superset with:</li>
+				<li>Barbell curls: 3 x 12+ if possible</li>
+				<li>Flat bench presses: 3 x 12/15 superset with:</li>
+				<li>Single arm rows: 3 x 10/12</li>
+				<li>Squats: 3 x 15/20</li>
+				<li>Press behind the neck: 3 x 12/15 superset with:</li>
+				<li>Barbell shrugs: 3 x 8/10</li>
+			</fieldset>
+			<h4>Abs</h4>
+			<fieldset>
+				<li>Seated barbell twists: 2 minutes</li>
+				<li>Crunches for 2 minutes or failure</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================beginner day2 page=======================================================-->
+	<div data-role="page" id="bday2" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Beginner Day 2</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Concentrate on warming up well first and drink at least a gallon of water for the day. This group of exercises will flush all toxin residue from vascular system. Concentrate using good form rather than heavy weight.</h4>
+			<fieldset>
+				<li>Barbell curls: 3 x 15</li>
+				<li>close grip bench presses: 3 x 20</li>
+				<li>Good morning bends: 3 x 15</li>
+				<li>Squat just the bar and no additional weight: 3 x 30</li>
+				<li>Flat bench press: 3 x 20</li>
+				<li>Single Arm Rows: 3 x 20</li>
+				<li>Vertical Rows:3 x 12 one arm at a time</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================beginner day3 page=======================================================-->
+	<div data-role="page" id="bday3" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Beginner Day 3</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Attempt to increase your lifting max weight eventhough its only a few pounds. Warm up by treadmill at a 6 minute per mile pace for 10 minutes.</h4>
+			<fieldset>
+				<li>Seated behind the neck shoulder press: 4 x 10</li>
+				<li>Barbell Squats: 4 x 10</li>
+				<li>Incline Bench Press: 4 x 10</li>
+				<li>Heavy Barbell Curls: 4 x 12</li>
+				<li>Tricep Rope Pulldowns: 4 x 12</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================Intermediate page=======================================================-->
+	<div data-role="page" id="intermediate" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Intermediate</h3>
+		</div>
+
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e">
+				<li data-role="list-divider" data-theme="a">4 Day system (Mon, Tue, Thur, and Fri)</li>
+				<li><a href="#mon+tue">Monday and Thursday</a></li>
+				<li><a href="#thu+fri">Thursday and Friday</a></li>
+			</ul>
+			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e">
+				<li data-role="list-divider" data-theme="a">4 Day system (Any 2 days on 2 days off)</li>
+				<li><a href="#iday1+3">Days 1 and 3</a></li>
+				<li><a href="#iday2+4">Days 2 and 4</a></li>
+			</ul>
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================Mon+tue page=======================================================-->
+	<div data-role="page" id="mon+tue" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Mon + Tue</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>These days are all about your shoulders, back, and triceps. Go as heavy as possible in both sets. Warm up for at least 5 minutes.</h4>
+			<fieldset>
+				<li>Seated behind the neck shoulder press: 2 x 8</li>
+				<li>Dumbell lateral raises: 2 x 10</li>
+				<li>Single arm rows: 2 x 10</li>
+				<li>Deadlifts: 2 x 10</li>
+				<li>Dips: 2 x to failure</li>
+				<li>Tricep kickbacks: 2 x 10 one arm at a time</li>
+			</fieldset>
+			<h4>Abs</h4>
+			<fieldset>
+				<li>Crunches: 2 x to failure</li>
+				<li>Decline sit-ups: 2 x to failure</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================Thu+Fri page=======================================================-->
+	<div data-role="page" id="thu+fri" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Thur + Fri</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Legs, Chest, and Biceps. The focus here is going as heavy as possible. By the last rep you should be beyond failure. If your not than your just cheating yourself.</h4>
+			<fieldset>
+				<li>Full Squats: 2 x 10</li>
+				<li>Good morning bends: 2 x 10</li>
+				<li>Standing calf raises: 2 x 12</li>
+				<li>Bench Press: 2 x 10</li>
+				<li>Flat cable flys: 3 x 10</li>
+				<li>Barbell curls: 3 x 10</li>
+				<li>Alternate dumbells curls: 2 x 10</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================iday1+3 page=======================================================-->
+	<div data-role="page" id="iday1+3" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Days 1 and 3</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Legs, Chest, and Biceps. This routine should be done fast with no more than 1 minute rest in between sets.</h4>
+			<fieldset>
+				<li>Box Squats: 3 x 12</li>
+				<li>Dumbell Bench Press: 3 x 12</li>
+				<li>Seated Dumbell Curls: 3 x 10-12</li>
+				<li>Barbell Lunges: 2 x 10</li>
+				<li>Cross Bench Pullovers: 3 x 8</li>
+				<li>Concentration curls: 3 x 10</li>
+			</fieldset>
+			<h4>Abs</h4>
+			<fieldset>
+				<li>Decline Crunches: 2 x to failure</li>
+				<li>Flutter Kicks: 2 x 1 minute each</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================iday2+4 page=======================================================-->
+	<div data-role="page" id="iday2+4" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Days 2 and 4</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Shoulders, Back, and Triceps. Again this routine should be be done in high intensity mode. Complete routine should take no more than 40 minutes.</h4>
+			<fieldset>
+				<li>Shoulder Press Behind the Neck: 3 x 12</li>
+				<li>Bent over Barbell Rows: 3 x 10</li>
+				<li>Triceps Press: 3 x 10</li>
+				<li>Dumbell Lateral Raises: 3 x 10</li>
+				<li>Keystone Deadlifts: 3 x 8</li>
+			</fieldset>
+			<h4>Abs</h4>
+			<fieldset>
+				<li>Barbell Twists: 2 x 1 minute each</li>
+				<li>Sit-ups: 2 x to failure</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================Advanced page=======================================================-->
+	<div data-role="page" id="advanced" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Advanced</h3>
+		</div>
+
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e">
+				<li data-role="list-divider" data-theme="a">5 Day System Option 1</li>
+				<li><a href="#monday">Monday</a></li>
+				<li><a href="#tuesday">Tuesday</a></li>
+				<li><a href="#wednesday">Wednesday</a></li>
+				<li><a href="#thursday">Thursday</a></li>
+				<li><a href="#friday">Friday</a></li>
+			</ul>
+			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e">
+				<li data-role="list-divider" data-theme="a">5 Day System Option 2</li>
+				<li><a href="#mon">Monday</a></li>
+				<li><a href="#tue">Tuesday</a></li>
+				<li><a href="#wed">Wednesday</a></li>
+				<li><a href="#thur">Thursday</a></li>
+				<li><a href="#fri">Friday</a></li>
+			</ul>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================5day #1 Monday page=======================================================-->
+	<div data-role="page" id="monday" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Opt1 Monday</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Shoulders and Legs</h4>
+			<fieldset>
+				<li>Dumbell Lateral Raises: 4 x 10</li>
+				<li>Barbell Squats: 4 x 8|10|10|12</li>
+				<li>Hack Squat: 4 x 10</li>
+				<li>Leg Extensions: 4 x 10</li>
+				<li>Standing Calf Raises: 4 x 12</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================5day #1 Tuesday page=======================================================-->
+	<div data-role="page" id="tuesday" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Opt1 Tuesday</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Shoulders and Chest</h4>
+			<fieldset>
+				<li>Barbell Press Behind the Neck: 4 x 10</li>
+				<li>Bench Press: 4 x 8|10</li>
+				<li>Inclined Flys: 4 x 10</li>
+				<li>Cable Crossovers: 4 x 10</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================5day #1 Wednesday page======================================================-->
+	<div data-role="page" id="wednesday" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Opt1 Wednesday</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Shoulders and Back</h4>
+			<fieldset>
+				<li>Bent over Lateral Raises: 4 x 10</li>
+				<li>Lat Pull-Downs: 4 x 8-10</li>
+				<li>Bent Over Rows: 4 x 8-10</li>
+				<li>Seated Pulley Rows: 4 x 8-10</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================5day #1 Thursday page=======================================================-->
+	<div data-role="page" id="thursday" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Opt1 Thursday</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Triceps and Biceps</h4>
+			<fieldset>
+				<li>Tricep Pushdowns: 4 x 10-12</li>
+				<li>Close Grip Bench Press: 4 x 8-10</li>
+				<li>Seated Behind the Neck Press with EZ bar: 4 x 10</li>
+				<li>Barbell Curls: 4 x 10</li>
+				<li>Seated Alternating Dumbell Curls: 4 x 10</li>
+				<li>Preacher Bar Curls: 4 x 10</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================5day #1 Friday page=======================================================-->
+	<div data-role="page" id="friday" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Opt1 Friday</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Shoulders and Legs</h4>
+			<fieldset>
+				<li>Seated Dumbell Press: 4 x 10</li>
+				<li>Leg Curls: 4 x 8-10</li>
+				<li>Deadlifts: 4 x 10</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================5day #2 Monday page=======================================================-->
+	<div data-role="page" id="mon" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Opt2 Monday</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Calves, Leg Biceps, and Quads</h4>
+			<fieldset>
+				<li>Standing Calf Raises: 5 x 12</li>
+				<li>Stiff Legged Deadlifts: 4 x 6|8|10|10</li>
+				<li>Leg Curls: 4 x 12</li>
+				<li>Squats: 4 x 12|10|8|6</li>
+				<li>Leg Extensions: 4 x 10</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================5day #2 Tuesday page=======================================================-->
+	<div data-role="page" id="tue" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Opt2 Tuesday</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Chest and Abs</h4>
+			<fieldset>
+				<li>Incline Bench Press: 4 x 12|10|8|8</li>
+				<li>Incline Flys: 4 x 12</li>
+				<li>Flat Bench Press: 4 x 10</li>
+				<li>Cable Crossovers: 4 x 10</li>
+				<li>Flat Leg Raises: 3 x 20+</li>
+				<li>Crunches: 3 x Max</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================5day #2 Wednesday page=======================================================-->
+	<div data-role="page" id="wed" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Opt2 Wednesday</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Back, Rear Delts, and Calves</h4>
+			<fieldset>
+				<li>Lat Pull-Downs: 4 x 12|10|8|6</li>
+				<li>Bent Over Rows: 4 x 12|10|8|6</li>
+				<li>Seated Pulley Rows: 4 x 10</li>
+				<li>Bent Over lateral Raises: 5 x 10</li>
+				<li>Standing Calf Raises: 5 x 12+</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================5day #2 Thursday page=======================================================-->
+	<div data-role="page" id="thur" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Opt2 Thursday</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Shoulders and Hamstrings</h4>
+			<fieldset>
+				<li>Seated Press Behind Neck: 4 x 12|10|8|6</li>
+				<li>Dumbell Lateral Raises: 4 x 12</li>
+				<li>Seated Front Barbell Press: 4 x 10|12</li>
+				<li>Leg Curls: 4 x 10|12</li>
+				<li>Deadlifts: 4 x 10</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================5day #2 Friday page=======================================================-->
+	<div data-role="page" id="fri" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Opt2 Friday</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Arms</h4>
+			<fieldset>
+				<li>Barbell Curl: 4 x 12|10|8|6</li>
+				<li>Seated Alternate Dumbell Curls: 4 x 8-10</li>
+				<li>EZ Preacher Curls: 3 x 10</li>
+				<li>Seated Triceps Press: 4 x 8-10</li>
+				<li>Close Grip Bench Press: 4 x 8-10</li>
+				<li>Triceps Pushdowns: 4 x 8-10</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--======================================================MMA page=======================================================-->
+	<div data-role="page" id="mma" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>MMA</h3>
+		</div>
+
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e">
+				<li data-role="list-divider" data-theme="a">Randy Couture's Plan</li>
+				<li><a href="#rcwc">Workout Circuit</a></li>
+				<li data-role="list-divider" data-theme="a">Brock Lesnar's Plan</li>
+				<li><a href="#blsw">Strength</a></li>
+				<li><a href="#blme">Endurance</a></li>
+			</ul>
+		</div>
+
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+					<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+					<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--===================================================rcwc Workout Circuit page======================================================-->
+	<div data-role="page" id="rcwc" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Circuit Plan</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Randy Couture's Circuit Training for Muscular Endurance</h4>
+			<p>Complete this list and rest for 2 minutes. Then complete the list again for a total of 3 times.</p>
+			<fieldset>
+				<li>Bent over rows: x 10</li>
+				<li>Upright Rows: x 10</li>
+				<li>Military Press: x 10</li>
+				<li>Good Morning Bends: x 8</li>
+				<li>Lunges: x 8 per leg</li>
+				<li>Deadlift: x 8</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--===================================================blsw MuscleWorkout page======================================================-->
+	<div data-role="page" id="blsw" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Brock's Plan</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>Brock Lesnar's Plan For Muscle Development</h4>
+			<p>This is a week long plan 4 days with your choice of 3 days off.</p>
+			<fieldset>
+				<h4>Day 1</h4>
+				<li>Bench Press: 6 x 12</li>
+				<li>Incline Dumbbell Press: 4 x 10</li>
+				<li>Dumbbell Flyes: 3 x 8</li>
+				<li>Cable Crossovers: 3 x 8</li>
+				<li>Triceps Dips: 4 x 10</li>
+				<li>Triceps Pushdowns: 4 x 10</li>
+				<li>Skull Crushers: 3 x 10</li>
+				<h4>Day 2</h4>
+				<li>Wide-Grip Pull-Up: 4 x 6</li>
+				<li>Medium-Grip Pull-Up: 4 x 6</li>
+				<li>Narrow-Grip Pull-Up: 4 x 6</li>
+				<li>Seated Cable Row: 4 x 6</li>
+				<li>Stiff-Legged Deadlift: 4 x 6</li>
+				<li>Deadlift: 4 x 6</li>
+				<li>Preacher Curl: 4 x 12</li>
+				<li>Hammer Curl: 3 x 10</li>
+				<li>Incline Dumbbell Curl 3 x 10</li>
+				<h4>Day 3</h4>
+				<li>Overhead Barbell Press: 4 x 10</li>
+				<li>Seated Dumbbell Press: 3 x 10</li>
+				<li>Dumbbell Front Raise: 3 x 10</li>
+				<li>Dumbbell Lateral Raise: 3 x 10</li>
+				<li>Smith Machine Upright Row: 4 x 6</li>
+				<li>Barbell/Dumbbell Shrug: 4 x 6</li>
+				<h4>Day 4</h4>
+				<li>Leg Extension: 3 x 10</li>
+				<li>Leg Curl: 3 x 10</li>
+				<li>Narrow-Stance Smith Machine Squat: 4 x 6</li>
+				<li>Medium-Stance Smith Machine Squat: 4 x 6</li>
+				<li>Wide-Stance Smith Machine Squat: 4 x 6</li>
+				<li>Leg Press: 4 x 6</li>
+				<li>Stiff-Legged Deadlift: 4 x 6</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--===================================================blme circuit page=====================================================-->
+	<div data-role="page" id="blme" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Brock's Plan</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>This is a cardio intense workout plan. Focus here is to get lean and build maximum endurance.</h4>
+			<p>5 rounds 1 minute each round to be completed in succession. No rest periods here. This is not for the weak or doubtful.</p>
+			<fieldset>
+				<h4>Round 1</h4>
+				<li>Spiderman Push-ups</li>
+				<li>PlyPush-ups</li>
+				<li>Mounted Punching</li>
+				<li>Tire Push</li>
+				<li>Hand Switch</li>
+			</fieldset>
+			<fieldset>
+				<h4>Round 2</h4>
+				<li>Recline Pull-ups</li>
+				<li>Bodyweight Pull-ups</li>
+				<li>Pulling/Pushing tire</li>
+				<li>Jumping Pull-ups</li>
+				<li>Heavy bag Twirl</li>
+			</fieldset>
+			<fieldset>
+				<h4>Round 3</h4>
+				<li>Airdyne Bike (70rpm)</li>
+				<li>UBE Machine</li>
+				<li>Incline Treadmill (as steep as possible)</li>
+				<li>Windsprint Bike (standing full time)</li>
+				<li>Airdyne Bike</li>
+			</fieldset>
+			<fieldset>
+				<h4>Round 4</h4>
+				<li>Jammer Machine</li>
+				<li>One arm Sledge Hammer</li>
+				<li>Medicine Ball Sprawls</li>
+				<li>Bear Crawls</li>
+				<li>Transition Station</li>
+			</fieldset>
+			<fieldset>
+				<h4>Round 5</h4>
+				<li>Airdyne Bike (70rpm)</li>
+				<li>UBE Machine</li>
+				<li>Incline Treadmill (as steep as possible)</li>
+				<li>Windsprint Bike (standing full time)</li>
+				<li>Airdyne Bike</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--===================================================Kettlebell page======================================================-->
+	<div data-role="page" id="kettlebell" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Kettlebell</h3>
+		</div>
+
+		<div data-role="content">
+			<h4>This exercise should be done 2 times per week for no more than 10 minutes total.</h4>
+			<fieldset>
+				<li>Kettle Swings: 1 minute per arm</li>
+				<li>Kettle Squat: 20 x per arm</li>
+				<li>Kettle Snatch: 10 x per arm</li>
+				<li>Kettle Windmills: 10 x per side</li>
+				<li>Flat Kettle Presses: 10 x per arm</li>
+				<li>Kettle Swings: 1 minute per arm.</li>
+			</fieldset>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--===================================================info page======================================================-->
+	<div data-role="page" id="info" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>About Me</h3>
+		</div>
+		<div data-role="content">
+			<h4>My name is Michael Bruchal and this is my app.</h4>
+			<fieldset>
+				<p>This app will hopefully motivate people from all over the world to strive for physical fitness and promote good health. I learned how to train my body both physical and mental by the U.S. Army. I served in the Army for 12 years and that has taught me how to maintain a healthy lifestyle.</p>
+			</fieldset>
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+					<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+					<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--===================================================info page======================================================-->
+	<div data-role="page" id="additem" data-add-back-btn="true">
+
+		<div data-role="header" data-position="fixed">
+			<h3>Add New Workout</h3>
+		</div>
+		<div id="nav">
+			<a href="#" id="clearData" data-ajax="false" data-inline="true" data-role="button" data-icon="minus" data-iconpos="right" data-theme="a">Clear Data</a>
+			<a href="#" id="displayData" data-ajax="false" data-inline="true" data-role="button" data-icon="plus" data-iconpos="right" data-theme="a">Display Data</a>
+			<a href="#additem" id="addNew" style="display:none;" data-ajax="false" data-inline="true" data-role="button" data-icon="plus" data-iconpos="right" data-theme="a">Add New</a>
+		</div>
+		<div data-role="content">
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+</body>
+</html>
