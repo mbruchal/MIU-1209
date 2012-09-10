@@ -15,7 +15,7 @@ body{
 	}
 h1{
 	font-family: 'Trade Winds', cursive;
-	background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 553, color-stop(0, #FFFFFF), color-stop(1, #999697));
+	/*background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 553, color-stop(0, #FFFFFF), color-stop(1, #999697));*/
 	color: red;
 	text-shadow:
 		3px 3px 0 white,

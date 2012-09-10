@@ -19,11 +19,13 @@
 	<meta http-equiv="cleartype" content="on">
 	
 	<!-- StyleSheets under here -->
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/mobile/latest/jquery.mobile.min.css" />
+	<link rel="stylesheet" type="text/css" href="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.min.css" /> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<link href='http://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Trade+Winds' rel='stylesheet' type='text/css'>
-	
+	<!--link rel="stylesheet" type="text/css" href="css/styles.css"/-->
+	<link href='http://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'/>
+	<link href='http://fonts.googleapis.com/css?family=Trade+Winds' rel='stylesheet' type='text/css'/>
+
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
 	<!--====================================Set Background image======================================-->
@@ -920,20 +922,105 @@
 			</div>
 		</div>
 	</div>
-	<!--===================================================info page======================================================-->
+	<!--===================================================additem page======================================================-->
 	<div data-role="page" id="additem" data-add-back-btn="true">
 
 		<div data-role="header" data-position="fixed">
 			<h3>Add New Workout</h3>
 		</div>
 		<div id="nav">
-			<a href="#" id="clearData" data-ajax="false" data-inline="true" data-role="button" data-icon="minus" data-iconpos="right" data-theme="a">Clear Data</a>
-			<a href="#" id="displayData" data-ajax="false" data-inline="true" data-role="button" data-icon="plus" data-iconpos="right" data-theme="a">Display Data</a>
+			<a href="#" id="clearData" data-ajax="false" data-inline="true" data-role="button" data-icon="delete" data-iconpos="right" data-theme="e">Clear Data</a>
+			<a href="#" id="displayData" data-ajax="false" data-inline="true" data-role="button" data-icon="star" data-iconpos="right" data-theme="e">Display Data</a>
 			<a href="#additem" id="addNew" style="display:none;" data-ajax="false" data-inline="true" data-role="button" data-icon="plus" data-iconpos="right" data-theme="a">Add New</a>
 		</div>
-		<div data-role="content">
+		<div data-role="content" data-theme="a">
+
+			<form action="#" method="post" id="workoutForm" data-ajax="false">
+
+				<div data-role="fieldcontain">
+					<label for="todaysdate">*Date Added </label>
+					<input type="date" name="date" id="dateAdded" data-role="datebox" data-options='{"mode": "calbox"}' data-theme="e"/>
+				</div>
+
+				<div data-role="fieldcontain">
+					<label for="group" id="select">*Workout Type: </label>	<!-- Drop Down Menu Choice -->
+				</div>
+
+				<div data-role="fieldcontain">
+					<label for="intensity">Intensity Level? </label>
+					<input id="intensity" type="range" min="1" max="10" value="5" onchange="rangevalue.value = value" data-theme="e" data-track-theme="e"></input>
+				</div>
+
+				<div data-role="fieldcontain">
+					<label for="NumOfDays">Number Of Days Per Week: </label>
+						<select id="NumOfDays" data-theme="e">
+							<option value="1">1 </option>
+							<option value="2">2 </option>
+							<option value="3">3 </option>
+							<option value="4">4 </option>
+							<option value="5">5 </option>
+						</select>
+				</div>
+
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup" data-type="horizontal">
+						<legend>Duration of Exercise: </legend>
+						<input type="radio" value="15mins" id="mins" name="mins" />
+						<label for="15mins">15 Mins.</label>
+						<input type="radio" value="30mins" id="mins" name="mins" />
+						<label for="30mins">30 Mins.</label>
+						<input type="radio" value="45mins" id="mins" name="mins" />
+						<label for="45mins">45 Mins.</label>
+					</fieldset>
+				</div>
+
+				<div data-role="fieldcontain">
+					<label for="notes">Additional Notes: </label>
+					<textarea id="notes" data-theme="e"></textarea>
+				</div>
+
+				<div data-role="fieldcontain">
+					<label for="bmi">BMI: </label>
+					<input type="text" id="bmi" data-theme="e" placeholder="0.00" />
+				</div>
+
+				<div data-role="fieldcontain">
+					<label for="BodyFat">Body Fat% </label>
+					<input type="text" id="BodyFat" data-theme="e" placeholder="0.00%" />
+				</div>
+
+				<div data-role="fieldcontain">
+					<label for="CurrentWeight">*Current Weight? </label>
+					<input type="text" id="CurrentWeight" data-theme="e" placeholder="Ibs." />
+				</div>
+
+				<div data-role="fieldcontain">
+					<label for="TargetWeight">*Target Weight? </label>
+					<input type="text" id="TargetWeight" data-theme="e" placeholder="Ibs." />
+				</div>
+
+				<input type="submit" id="submit" value="Save!" data-theme="b"/>
+
+			</form>
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Gold/" data-icon="check">Gold</a></li>
+						<li><a href="http://mbruchal.github.com/MIU-1209/Project2/Bronze/" data-icon="plus">Bronze</a></li>
+						<li><a href="http://feeds.sciencedaily.com/sciencedaily/health_medicine/fitness" data-icon="star">News</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script>
+	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+	<script type="text/javascript" src="js/json.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
