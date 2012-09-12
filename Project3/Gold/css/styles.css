@@ -39,8 +39,8 @@ h3{
 		1px -1px 0 white,
 		-1px 1px 0 white,
 		1px 1px 0 white;
-	/*font-size: 50px;
 	text-align: center;
+	/*font-size: 50px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	margin-top: -1px;*/
@@ -104,20 +104,19 @@ legend{
 		-1px 1px 0 #000,
 		1px 1px 0 #000;
 }
-fieldset{
+/*fieldset{
 	background: url(images/transparent_gradient.png) no-repeat;
 	word-wrap:normal;
 	border-color: red;
 	border-style: inset;
 	margin: 5px;
 	margin-top: 20px;
-}
+}*/
 li{
 	margin-left: -10px;
 	display: block;
 	font-family: 'Black Ops One', cursive;
 	color: white;
-	line-height: 25px;
 }
 input[type='range'] { 
 	-webkit-appearance: none;
@@ -184,5 +183,17 @@ div ul{
 #homelink:hover{
 	color: red;
 }
-
-
+#legend{
+	font-family: 'Black Ops One', cursive;
+}
+label.error{
+	display: block;
+	margin: 10px, 0;
+	color: red;
+}
+#errors{
+	display: none;
+}
+#additemerrors.li{
+	color: red;
+}

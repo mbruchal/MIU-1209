@@ -1,66 +1,110 @@
 /* Michael Bruchal
-   09SEP2012
+   12 SEP2012
    MIU 1209
-   Project 2
+   Project 3
 */
 
-//Wait until the DOM is ready.
-window.addEventListener("DOMContentLoaded", function() {
+$('#home').on('pageinit', function(){
+	//code needed for home page goes here
+});	
+		
+$('#additem').on('pageinit', function(){
 
-	//getElementById function
-	function $(x) {
-		var theElement = document.getElementById(x);
-		return theElement;
-	}
-
-	//Create set field element and populate with options
-	function makeWorkoutTypes() {
-		var formTag = document.getElementsByTagName("form"),	//Form tag is an array of all the form tags
-			selectLi = $("select"),
-			makeSelect = document.createElement("select");
-			makeSelect.setAttribute("id", "groups");
-		for (var i=0, j=workOutType.length; i<j; i++) {
-			var makeOption = document.createElement("option");
-			var optText = workOutType[i];
-			makeOption.setAttribute("value", optText);
-			makeOption.innerHTML = optText;
-			makeSelect.appendChild(makeOption);
+		var myForm = $('#workoutForm');
+			errorslink = $('#errors');
+		    myForm.validate({
+			invalidHandler: function(form, validator) {
+				errorslink.click();
+			},
+			submitHandler: function() {
+		var data = myForm.serializeArray();
+			storeData(data);
 		}
-		selectLi.appendChild(makeSelect);
-	}
+	});
+	
+	//any other code needed for addItem page goes here
+	
+});
 
-	//Find value of selected radio
-	function getSelectedRadio() {
-		var radios = document.forms[0].mins;
-		for (var i=0; i<radios.length; i++) {
-			if(radios[i].checked) {
-				minValue = radios[i].value;
+//The functions below can go inside or outside the pageinit function for the page in which it is needed.
+
+//getElementById function
+var id = function (x){
+	var theElement = document.getElementById(x);
+	return theElement;
+}
+
+var autoFillData = function (){
+	 for(var n in json) {
+			var id = Math.floor(Math.random()*10000001);
+			localStorage.setItem(id, JSON.stringify(json[n]));
+	};
+}
+
+var getData = function (){
+	toggleControls("on");
+		if(localStorage.length === 0) {
+			alert("There are no Workouts to display in Local Storage so default type is displayed");
+			autoFillData();
+		}
+		//Write data from Local Storage to the browser.
+		var makeDiv = document.createElement("div");
+		makeDiv.setAttribute("id", "items");
+		var makeList = document.createElement("ul");
+		makeDiv.appendChild(makeList);
+		document.body.appendChild(makeDiv);
+		$("items").toggle("show");
+		for (var i=0, len=localStorage.length; i<len; i++) {
+			var makeLi = document.createElement("li");
+			var linksLi = document.createElement("li");
+			makeList.appendChild(makeLi);
+			var key = localStorage.key(i);
+			var value = localStorage.getItem(key);
+			//Convert the string from local storage value back to an object by using JSON
+			var obj = JSON.parse(value);
+			var makeSubList = document.createElement("ul");
+			makeLi.appendChild(makeSubList);
+			//getImage(obj.group[1], makeSubList);
+			for (var n in obj) {
+				var makeSubli = document.createElement("li");
+				makeSubList.appendChild(makeSubli);
+				var optSubText = obj[n][0]+ " "+obj[n][1];
+				makeSubli.innerHTML = optSubText;
+				makeSubList.appendChild(linksLi);
 			}
+			makeItemLinks(localStorage.key(i), linksLi); //create our edit/delete buttons for each item in local storage
 		}
-	}
+};
 
-	function toggleControls(n) {
-		switch(n) {
-			case "on":
-				$("workoutForm").style.display = "none";
-				$("clearData").style.display = "inline";
-				$("displayData").style.display = "none";
-				$("addNew").style.display = "inline";
-				break;
-			case "off":
-				$("workoutForm").style.display = "block";
-				$("clearData").style.display = "inline";
-				$("displayData").style.display = "inline";
-				$("addNew").style.display = "none";
-				$("items").style.display = "none";
-				break;
-			default:
-				return false;
-		}
-	}
+//make item links
+//create the edit and delete links for each stored item when displayed
+var makeItemLinks = function(key, linksLi) {
+	//add edit single item link
+	var editLink = document.createElement("a");
+	editLink.href = "#";
+	editLink.key = key;
+	var editText = "Edit Workout";
+	editLink.addEventListener("click", editItem);
+	editLink.innerHTML = editText;
+	linksLi.appendChild(editLink);
 
-	function saveData(key) {
-		//If there is no key, this means this is a brand new item and we need a new key.
+	//add line break
+	var breakTag = document.createElement("br");
+	linksLi.appendChild(breakTag);
+
+	//add delete single item link
+	var deleteLink = document.createElement("a");
+	deleteLink.href = "#";
+	deleteLink.key = key;
+	var deleteText = "Delete Workout";
+	deleteLink.addEventListener("click", deleteItem);
+	deleteLink.innerHTML = deleteText;
+	linksLi.appendChild(deleteLink);
+};
+
+
+var storeData = function (key){
+	//If there is no key, this means this is a brand new item and we need a new key.
 		if(!key) {
 		var id 					= Math.floor(Math.random()*10000001);
 		} else {
@@ -83,91 +127,10 @@ window.addEventListener("DOMContentLoaded", function() {
 			item.TargetWeight   = ["Target Weight ", $("TargetWeight").value + " Ibs."];
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Info Saved!");
-	}
+};
 
-	function getData() {
-		toggleControls("on");
-		if(localStorage.length === 0) {
-			alert("There are no Workouts to display in Local Storage so default type is displayed");
-			autoFillData();
-		}
-		//Write data from Local Storage to the browser.
-		var makeDiv = document.createElement("div");
-		makeDiv.setAttribute("id", "items");
-		var makeList = document.createElement("ul");
-		makeDiv.appendChild(makeList);
-		document.body.appendChild(makeDiv);
-		$("items").style.display = "display";
-		for (var i=0, len=localStorage.length; i<len; i++) {
-			var makeLi = document.createElement("li");
-			var linksLi = document.createElement("li");
-			makeList.appendChild(makeLi);
-			var key = localStorage.key(i);
-			var value = localStorage.getItem(key);
-			//Convert the string from local storage value back to an object by using JSON
-			var obj = JSON.parse(value);
-			var makeSubList = document.createElement("ul");
-			makeLi.appendChild(makeSubList);
-			getImage(obj.group[1], makeSubList);
-			for (var n in obj) {
-				var makeSubli = document.createElement("li");
-				makeSubList.appendChild(makeSubli);
-				var optSubText = obj[n][0]+ " "+obj[n][1];
-				makeSubli.innerHTML = optSubText;
-				makeSubList.appendChild(linksLi);
-			}
-			makeItemLinks(localStorage.key(i), linksLi); //create our edit/delete buttons for each item in local storage
-		}
-	}
-
-	//Get the image for the right category.
-	function getImage(iconName, makeSubList) {
-		var imageLi = document.createElement("li");
-		makeSubList.appendChild(imageLi);
-		var newImg = document.createElement("img");
-		var setSrc = newImg.setAttribute("src", "img/" + iconName + ".png");
-		imageLi.appendChild(newImg);
-	}
-
-	//Auto Populate Local Storage.
-	function autoFillData() {
-		//The actual JSON object data required for this to work is comiung from our json.js file
-		//Store the JSON object into Local Storage.
-		for(var n in json) {
-			var id = Math.floor(Math.random()*10000001);
-			localStorage.setItem(id, JSON.stringify(json[n]));
-		}
-	}
-
-	//make item links
-	//create the edit and delete links for each stored item when displayed
-	function makeItemLinks(key, linksLi) {
-		//add edit single item link
-		var editLink = document.createElement("a");
-		editLink.href = "#";
-		editLink.key = key;
-		var editText = "Edit Workout";
-		editLink.addEventListener("click", editItem);
-		editLink.innerHTML = editText;
-		linksLi.appendChild(editLink);
-
-		//add line break
-		var breakTag = document.createElement("br");
-		linksLi.appendChild(breakTag);
-
-		//add delete single item link
-		var deleteLink = document.createElement("a");
-		deleteLink.href = "#";
-		deleteLink.key = key;
-		var deleteText = "Delete Workout";
-		deleteLink.addEventListener("click", deleteItem);
-		deleteLink.innerHTML = deleteText;
-		linksLi.appendChild(deleteLink);
-	}
-
-	//Edit single item
-	function editItem () {
-		//Grab the data from our item from Local Storage
+var editItem = function (){
+	//Grab the data from our item from Local Storage
 		var value = localStorage.getItem(this.key);
 		var item = JSON.parse(value);
 
@@ -188,8 +151,8 @@ window.addEventListener("DOMContentLoaded", function() {
 				radios[i].setAttribute("checked", "checked");
 			  } else if(radios[i].value == "45mins" && item.mins[1] == "45mins") {
 			  	radios[i].setAttribute("checked", "checked");
-			    }
-		}
+			    };
+		};
 		$("dateAdded").value = item.date[1];
 		$("bmi").value = item.bmi[1];
 		$("intensity").value = item.intensity[1];
@@ -205,20 +168,28 @@ window.addEventListener("DOMContentLoaded", function() {
 		//so we can use that value when we save the data we edited.
 		editSubmit.addEventListener("click", validate);
 		editSubmit.key = this.key;
-	}
+};
 
-	function clearLocal() {
-		if (localStorage.length === 0) {
-			alert("There is no data to clear!");
-		} else {
-			localStorage.clear();
-			alert("All Workouts are deleted!");
-			window.location.reload();
-			return false;
-		  }
-	}
+var toggleControls = function (n) {
+		switch(n) {
+			case "on":
+				$("workoutForm").toggle("hide");
+				$("clearData").toggle("inline");
+				$("displayData").toggle("none");
+				$("addNew").removeClass("ui-disabled");
+				break;
+			case "off":
+				$("workoutForm").toggle("show");
+				$("clearData").toggle("show");
+				$("displayData").toggle("show");
+				$("addNew").addClass("ui-disabled");
+				break;
+			default:
+				return false;
+		}
+};
 
-	function deleteItem() {
+var deleteItem = function () {
 		var ask = confirm("Are you sure you want to delete this Workout?");
 		if(ask) {
 			localStorage.removeItem(this.key);
@@ -227,121 +198,28 @@ window.addEventListener("DOMContentLoaded", function() {
 		} else {
 			alert("Workout was deleted!");
 		  }
-	}
-
-	function validate(e) {
-		//Define the elements we want to check
-		var getGroup = $("groups");
-		var getdateAdded = $("dateAdded");
-		var getCurrentWeight = $("CurrentWeight");
-		var getTargetWeight = $("TargetWeight");
-
-		//Reset Error Messages
-		errMsg.innerHTML = "";
-		getGroup.style.border = "1px solid black";
-		getdateAdded.style.border = "1px solid black";
-		getCurrentWeight.style.border = "1px solid black";
-		getTargetWeight.style.border = "1px solid black";
-
-		//Get error message
-		var messageAry = [];
-		//Group validation
-		if(getGroup.value === "--Choose a Workout--") {
-			var groupError = "Please Choose a Workout!";
-			getGroup.style.border = "1px solid yellow";
-			messageAry.push(groupError);
-		}
-
-		//Date validation
-		if(getdateAdded.value === "") {
-			var dateAddedError = "Please add a date!";
-			getdateAdded.style.border = "1px solid yellow";
-			messageAry.push(dateAddedError);
-		}
-
-		//Current Weight
-		if(getCurrentWeight.value === "") {
-			var currentWeightError = "Please add Current Weight!";
-			getCurrentWeight.style.border = "1px solid yellow";
-			messageAry.push(currentWeightError);
-		}
-
-		//Target Weight
-		if(getTargetWeight.value === "") {
-			var targetWeightError = "Please add Target Weight!";
-			getTargetWeight.style.border = "1px solid yellow";
-			messageAry.push(targetWeightError);
-		}
-
-		//If there were errors, display them on the screen.
-		if(messageAry.length >=1) {
-			for(var i=0, j=messageAry.length; i < j; i++) {
-				var txt = document.createElement("li");
-				txt.innerHTML = messageAry[i];
-				errMsg.appendChild(txt);
-			}
-			e.preventDefault();
-			return false;
+};
+					
+var clearLocal = function(){
+	if (localStorage.length === 0) {
+			alert("There is no data to clear!");
 		} else {
-		  //If all is OK save our data. Send the key value (which came from the editData function)
-		  //Remember this key value passed through the editSubmit event listener as a property.
-		    saveData(this.key);
-		  } 
-	}
-	
-	//Variable Defaults
-	var workOutType = ["--Choose a Workout--", "Chest", "Legs", "Shoulders", "Back", "Arms", "Cardio", "BattleRopes", "JumpRope", "StationaryBike"],
-		minValue;
-	makeWorkoutTypes();
-	errMsg = $("errors");
+			localStorage.clear();
+			alert("All Workouts are deleted!");
+			window.location.reload();
+			return false;
+		  };
+};
 
-	//Set Link and Submit Click Events.
-	var displayLink = $("displayData");
-	displayLink.addEventListener("click", getData);
-	var clearLink = $("clearData");
-	clearLink.addEventListener("click", clearLocal);
-	var save = $("submit");
-	save.addEventListener("click", validate);
-	
+//Set Link and Submit Click Events.
+var windowReload = function (){
+	window.location.reload();
+	return false;
+};
 
-	//Search
-	/*var search = $("searchBtn");
-	search.addEventListener("click", getSearch);
-
-	var getSearch = function(){
-
-		var category = $("groups").value;
-		var term = $("search").value;
-
-		//Search by Category Only
-		if(category != "--Choose A Workout--" && term === ""){
-			for(i=0, j=localStorage.length; i<j; i++){
-				var key = localStorage.key(i);
-				var value = localStorage.getItem(key);
-				var obj = JSON.parse(value);
-				if(category === obj.group[1]){
-					for (n in obj){
-						console.log(obj[n][1]);
-					}
-				} 
-			}
-		}
-		//Search by Term Only
-		/*if(term !== "" && category === "--Choose A Group--"){
-
-		}
-		//Search by BOTH Category AND Term
-		/*if(term != "" && category != "--Choose A Group--"){
-			for(i=0, j=localStorage.length; i<j; i++){
-				var key = localStorage.key(i);
-				var value = localStorage.getItem(key);
-				var obj = JSON.parse(value);
-				for (n in obj){
-
-				}
-			}
-		}
-	};*/
+	$( '#displayData' ).on( 'click', getData );
+	$( '#clearData'    ).on( 'click', clearLocal );
+	$( '#submit'      ).on( 'click', windowReload );
 
 
-});
+

@@ -926,7 +926,7 @@
 	<div data-role="page" id="additem" data-add-back-btn="true">
 
 		<div data-role="header" data-position="fixed">
-			<h3>Add New Workout</h3>
+			<h3>New Workout</h3>
 		</div>
 		<div id="nav">
 			<a href="#" id="clearData" data-ajax="false" data-inline="true" data-role="button" data-icon="delete" data-iconpos="right" data-theme="e">Clear Data</a>
@@ -935,20 +935,36 @@
 		</div>
 		<div data-role="content" data-theme="a">
 
-			<form action="#" method="post" id="workoutForm" data-ajax="false">
+			<form action="" method="post" id="workoutForm">
 
 				<div data-role="fieldcontain">
 					<label for="todaysdate">*Date Added </label>
-					<input type="date" name="date" id="dateAdded" data-role="datebox" data-options='{"mode": "calbox"}' data-theme="e"/>
+					<input type="date" name="date" id="dateAdded" data-role="datebox" data-options='{"mode": "calbox"}' data-theme="e" class="required date"/>
 				</div>
 
 				<div data-role="fieldcontain">
 					<label for="group" id="select">*Workout Type: </label>	<!-- Drop Down Menu Choice -->
+					<select id="workouttype" name="workouttype" data-theme="e" data-native-menu="false" class="required">
+						<option data-placeholder="true" value>Please Select One</option>
+						<optgroup label="Muscle Building">
+							<option value="chest">Chest</option>
+							<option value="legs">Legs</option>
+							<option value="shoulders">Shoulders</option>
+							<option value="back">Back</option>
+							<option value="arms">Arms</option>
+						</optgroup>
+						<optgroup label="Fat Burning">
+							<option value="cardio">Cardio</option>
+							<option value="battleropes">Battle Ropes</option>
+							<option value="jumprope">Jump Rope</option>
+							<option value="stationarybike">Stationary Bike</option>
+						</optgroup>
+					</select>
 				</div>
 
 				<div data-role="fieldcontain">
 					<label for="intensity">Intensity Level? </label>
-					<input id="intensity" type="range" min="1" max="10" value="5" onchange="rangevalue.value = value" data-theme="e" data-track-theme="e"></input>
+					<input id="intensity" type="range" min="1" max="10" value="5" data-theme="e" data-track-theme="e"></input>
 				</div>
 
 				<div data-role="fieldcontain">
@@ -963,13 +979,13 @@
 				</div>
 
 				<div data-role="fieldcontain">
-					<fieldset data-role="controlgroup" data-type="horizontal">
-						<legend>Duration of Exercise: </legend>
-						<input type="radio" value="15mins" id="mins" name="mins" />
+					<fieldset data-role="controlgroup">
+						<legend><label>Duration of Exercise: </label></legend>
+						<input type="radio" value="15mins" id="15mins" name="mins" data-theme="e"/>
 						<label for="15mins">15 Mins.</label>
-						<input type="radio" value="30mins" id="mins" name="mins" />
+						<input type="radio" value="30mins" id="30mins" name="mins" data-theme="e"/>
 						<label for="30mins">30 Mins.</label>
-						<input type="radio" value="45mins" id="mins" name="mins" />
+						<input type="radio" value="45mins" id="45mins" name="mins" data-theme="e"/>
 						<label for="45mins">45 Mins.</label>
 					</fieldset>
 				</div>
@@ -985,22 +1001,23 @@
 				</div>
 
 				<div data-role="fieldcontain">
-					<label for="BodyFat">Body Fat% </label>
+					<label for="bodyfat">Body Fat% </label>
 					<input type="text" id="BodyFat" data-theme="e" placeholder="0.00%" />
 				</div>
 
 				<div data-role="fieldcontain">
-					<label for="CurrentWeight">*Current Weight? </label>
-					<input type="text" id="CurrentWeight" data-theme="e" placeholder="Ibs." />
+					<label for="currentweight">*Current Weight? </label>
+					<input type="text" name="currentweight" id="CurrentWeight" class="required number" data-theme="e" placeholder="Ibs." />
 				</div>
 
 				<div data-role="fieldcontain">
-					<label for="TargetWeight">*Target Weight? </label>
-					<input type="text" id="TargetWeight" data-theme="e" placeholder="Ibs." />
+					<label for="targetweight">*Target Weight? </label>
+					<input type="text" name="targetweight" id="TargetWeight" class="required number" data-theme="e" placeholder="Ibs."/>
 				</div>
 
 				<input type="submit" id="submit" value="Save!" data-theme="b"/>
 
+				<a href="#additemerrors" id="errors" data-rel="dialog" data-transition="pop">Open Errors</a>
 			</form>
 			<div data-role="footer" data-position="fixed" data-theme="a">
 				<div data-role="navbar">
@@ -1014,12 +1031,14 @@
 			</div>
 		</div>
 	</div>
+
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.core.min.js"></script>
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.calbox.min.js"></script>
 	<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/i18n/jquery.mobile.datebox.i18n.en_US.utf8.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="js/json.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
