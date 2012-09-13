@@ -944,22 +944,22 @@
 			<form action="#" method="post" id="workoutForm">
 
 				<div data-role="fieldcontain">
-					<label for="todaysdate">*Date Added </label>
-					<input type="date" name="date" id="dateAdded" data-role="datebox" data-options='{"mode": "calbox"}' data-theme="e" class="required date"/>
+					<label for="todaysdate">*Add A Date </label>
+					<input type="date" name="date" id="dateAdded" value="09/15/2012" data-role="datebox" data-options='{"mode": "calbox"}' data-theme="e" class="required date"/>
 				</div>
 
 				<div data-role="fieldcontain">
-					<label for="group" id="select">*Workout Type: </label>	<!-- Drop Down Menu Choice -->
+					<label for="group" id="select">*Choose Workout: </label>	<!-- Drop Down Menu Choice -->
 					<select id="workouttype" name="workouttype" data-theme="e" data-native-menu="false" class="required">
 						<option data-placeholder="true" value>Please Select One</option>
-						<optgroup label="Muscle Building">
+						<optgroup label="Muscle Building" data-theme="a">
 							<option value="chest">Chest</option>
 							<option value="legs">Legs</option>
 							<option value="shoulders">Shoulders</option>
 							<option value="back">Back</option>
 							<option value="arms">Arms</option>
 						</optgroup>
-						<optgroup label="Fat Burning">
+						<optgroup label="Fat Burning" data-theme="a">
 							<option value="cardio">Cardio</option>
 							<option value="battleropes">Battle Ropes</option>
 							<option value="jumprope">Jump Rope</option>
@@ -991,7 +991,7 @@
 						<label for="15mins">15 Mins.</label>
 						<input type="radio" value="30mins" id="30mins" name="mins" data-theme="e"/>
 						<label for="30mins">30 Mins.</label>
-						<input type="radio" value="45mins" id="45mins" name="mins" data-theme="e"/>
+						<input type="radio" value="45mins" id="45mins" checked="checked" name="mins" data-theme="e"/>
 						<label for="45mins">45 Mins.</label>
 					</fieldset>
 				</div>
