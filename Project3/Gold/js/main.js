@@ -18,7 +18,7 @@ $('#additem').on('pageinit', function(){
 			},
 			submitHandler: function() {
 		var data = myForm.serializeArray();
-			storeData(data);
+			storeData(key);
 		}
 	});
 	
@@ -29,19 +29,19 @@ $('#additem').on('pageinit', function(){
 //The functions below can go inside or outside the pageinit function for the page in which it is needed.
 
 //getElementById function
-var id = function (x){
+var id = function(x){
 	var theElement = document.getElementById(x);
 	return theElement;
 }
 
-var autoFillData = function (){
+var autoFillData = function(){
 	 for(var n in json) {
 			var id = Math.floor(Math.random()*10000001);
 			localStorage.setItem(id, JSON.stringify(json[n]));
 	};
 }
 
-var getData = function (){
+var getData = function(){
 	toggleControls("on");
 		if(localStorage.length === 0) {
 			alert("There are no Workouts to display in Local Storage so default type is displayed");
@@ -52,8 +52,9 @@ var getData = function (){
 		makeDiv.setAttribute("id", "items");
 		var makeList = document.createElement("ul");
 		makeDiv.appendChild(makeList);
-		document.body.appendChild(makeDiv);
-		$("items").toggle("show");
+		$("#showData").append(makeDiv)
+		//document.body.appendChild(makeDiv);
+		id("items").style.display = "block";
 		for (var i=0, len=localStorage.length; i<len; i++) {
 			var makeLi = document.createElement("li");
 			var linksLi = document.createElement("li");
@@ -78,7 +79,7 @@ var getData = function (){
 
 //make item links
 //create the edit and delete links for each stored item when displayed
-var makeItemLinks = function(key, linksLi) {
+var makeItemLinks = function(key, linksLi){
 	//add edit single item link
 	var editLink = document.createElement("a");
 	editLink.href = "#";
@@ -103,7 +104,7 @@ var makeItemLinks = function(key, linksLi) {
 };
 
 
-var storeData = function (key){
+var storeData = function(key){
 	//If there is no key, this means this is a brand new item and we need a new key.
 		if(!key) {
 		var id 					= Math.floor(Math.random()*10000001);
@@ -115,21 +116,21 @@ var storeData = function (key){
 		}
 		getSelectedRadio();
 		var item                = {};
-			item.date           = ["Date Added: ", $("dateAdded").value];
-			item.group          = ["Workout Type: ", $("groups").value];
-			item.intensity      = ["Intensity: ", $("intensity").value];
-			item.NumOfDays      = ["Day# ", $("NumOfDays").value];
-			item.mins           = ["Duration of Exercise=", minValue];
-			item.notes          = ["Notes: ", $("notes").value];
-			item.bmi            = ["BMI: ", $("bmi").value];
-			item.BodyFat        = ["Body Fat ", $("BodyFat").value + "%"];
-			item.CurrentWeight  = ["Current Weight ", $("CurrentWeight").value + " Ibs."];
-			item.TargetWeight   = ["Target Weight ", $("TargetWeight").value + " Ibs."];
+			item.date           = ["Date Added: ", $("dateAdded").val()];
+			item.group          = ["Workout Type: ", $("groups").val()];
+			item.intensity      = ["Intensity: ", $("intensity").val()];
+			item.NumOfDays      = ["Day# ", $("NumOfDays").val()];
+			//item.mins           = ["Duration of Exercise=", minValue];
+			item.notes          = ["Notes: ", $("notes").val()];
+			item.bmi            = ["BMI: ", $("bmi").val()];
+			item.BodyFat        = ["Body Fat ", $("BodyFat").val()];
+			item.CurrentWeight  = ["Current Weight ", $("CurrentWeight").val()];
+			item.TargetWeight   = ["Target Weight ", $("TargetWeight").val()];
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Info Saved!");
 };
 
-var editItem = function (){
+var editItem = function(){
 	//Grab the data from our item from Local Storage
 		var value = localStorage.getItem(this.key);
 		var item = JSON.parse(value);
@@ -138,11 +139,11 @@ var editItem = function (){
 		toggleControls("off");
 
 		//populate the form fields with current localStorage values.
-		$("groups").value = item.group[1];
-		$("notes").value = item.notes[1];
-		$("BodyFat").value = item.BodyFat[1];
-		$("CurrentWeight").value = item.CurrentWeight[1];
-		$("TargetWeight").value = item.TargetWeight[1];
+		$("#groups").val(item.group[1]);
+		$("#notes").val(item.notes[1]);
+		$("#BodyFat").val(item.BodyFat[1]);
+		$("#CurrentWeight").val(item.CurrentWeight[1]);
+		$("#TargetWeight").val(item.TargetWeight[1]);
 		var radios = document.forms[0].mins;
 		for(var i=0; i<radios.length; i++) {
 			if(radios[i].value == "15mins" && item.mins[1] == "15mins") {
@@ -153,13 +154,14 @@ var editItem = function (){
 			  	radios[i].setAttribute("checked", "checked");
 			    };
 		};
-		$("dateAdded").value = item.date[1];
-		$("bmi").value = item.bmi[1];
-		$("intensity").value = item.intensity[1];
-		$("rangevalue").value = item.intensity[1];
-		$("NumOfDays").value = item.NumOfDays[1];
+		$("#dateAdded").val(item.date[1]);
+		$("#bmi").val(item.bmi[1]);
+		$("#intensity").val(item.intensity[1]);
+		$("#rangevalue").val(item.intensity[1]);
+		$("#NumOfDays").val(item.NumOfDays[1]);
 
-		//Remove the initial listener from the input "save workout" button.
+		myKey = this.key;
+		/*Remove the initial listener from the input "save workout" button.
 		save.removeEventListener("click", saveData);
 		//Change submit button value to edit button
 		$("submit").value = "Edit Workout";
@@ -167,15 +169,15 @@ var editItem = function (){
 		//Save the key value established in this function as a property of the editSubmit event
 		//so we can use that value when we save the data we edited.
 		editSubmit.addEventListener("click", validate);
-		editSubmit.key = this.key;
+		editSubmit.key = this.key;*/
 };
 
-var toggleControls = function (n) {
+var toggleControls = function(n){
 		switch(n) {
 			case "on":
 				$("workoutForm").toggle("hide");
-				$("clearData").toggle("inline");
-				$("displayData").toggle("none");
+				$("clearData").toggle("show");
+				$("displayData").toggle("hide");
 				$("addNew").removeClass("ui-disabled");
 				break;
 			case "off":
@@ -189,7 +191,7 @@ var toggleControls = function (n) {
 		}
 };
 
-var deleteItem = function () {
+var deleteItem = function(){
 		var ask = confirm("Are you sure you want to delete this Workout?");
 		if(ask) {
 			localStorage.removeItem(this.key);
@@ -212,14 +214,14 @@ var clearLocal = function(){
 };
 
 //Set Link and Submit Click Events.
-var windowReload = function (){
+var windowReload = function(){
 	window.location.reload();
 	return false;
 };
 
-	$( '#displayData' ).on( 'click', getData );
-	$( '#clearData'    ).on( 'click', clearLocal );
-	$( '#submit'      ).on( 'click', windowReload );
+	$('#displayData').on('click', getData);
+	$('#clearData').on('click', clearLocal);
+	$('#submit').on('click', windowReload);
 
 
 
