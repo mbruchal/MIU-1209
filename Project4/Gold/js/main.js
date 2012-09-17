@@ -192,11 +192,11 @@ var editItem = function(){
 		//save.removeEventListener("click", saveData);
 		//Change submit button value to edit button
 		//$("submit").value = "Edit Workout";
-		//var editSubmit = $("submit");
+		var editSubmit = myid("#submit");
 		//Save the key value established in this function as a property of the editSubmit event
 		//so we can use that value when we save the data we edited.
 		//editSubmit.addEventListener("click", validate);
-		//editSubmit.key = this.key;
+		editSubmit.key = this.key;
 };
 
 var deleteItem = function(){

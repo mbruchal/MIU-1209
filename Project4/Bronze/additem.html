@@ -1,0 +1,88 @@
+<!doctype html>
+<!-- Michael Bruchal
+	 MIU Project 2
+	 Term 1209
+	 Add Item Page -->
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="This is the web app." />
+		<meta name="robots" content="index, follow" />
+		<meta name="viewport" content="user-scalable =no, width=device-width" />
+		<meta name="viewport" content="target-densitydpi=device-dpi"/>
+		<meta name="handheldFriendly" content="true" />
+		<meta name="MobileOptimized" content="320" />
+		<title>My Workouts + Goal Tracker</title>
+		<link href="css/styles.css" rel="stylesheet" type="text/css"/>
+		<link href='http://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Trade+Winds' rel='stylesheet' type='text/css'>
+	</head>
+	<body>	<!-- Document Body -->
+		<h1>My Workouts +Goal Tracker</h1>
+			<nav>
+				<a href="#" id="clearData">Clear Data <a value="Clear Workouts"/>
+				<a href="#" id="displayData">Display Data <a value="Display Stored Info"/>
+				<a href="additem.html" id="addNew" style="display:none;">Add New Item</a>
+			</nav>
+		<form action="#" method="post" id="workoutForm">
+			<a href="index.html" id="homelink">Home</a>
+			<fieldset>
+				<legend>Add A Workout</legend>
+					<span id="fields">* fields are required.</span>
+					<ul id="errors"></ul>
+					<ul>
+						<li><label for="todaysdate">*Date Added: </label><input type="date" id="dateAdded"/></li>
+						<li id="select"><label for="group">*Workout Type: </label></li>	<!-- Drop Down Menu Choice -->
+							<label for="intensity">Intensity Level? </label>
+						<li><input id="intensity" type="range" min="1" max="10" value="5" onchange="rangevalue.value = value"></input></li>
+						<li>Easy-1<output id="rangevalue">5</output>Insane-10</li>
+						<li><label for="NumOfDays">Number Of Days Per Week: </label>
+							<select id="NumOfDays">
+								<option value="1">1 </option>
+								<option value="2">2 </option>
+								<option value="3">3 </option>
+								<option value="4">4 </option>
+								<option value="5">5 </option>
+							</select>
+						</li>
+						<li>Duration of Excercise:
+							<ul>
+								<li><input type="radio" value="15mins" id="mins" name="mins" /><label for="15mins">15 Mins.</label> </li>
+								<li><input type="radio" value="30mins" id="mins" name="mins" /><label for="30mins">30 Mins.</label> </li>
+								<li><input type="radio" value="45mins" id="mins" name="mins" /><label for="45mins">45 Mins. </li>
+							</ul>
+						</li>
+						<li><label for="notes">Additional Notes: </label><textarea id="notes"></textarea></li>
+					</ul>
+			</fieldset>
+			<fieldset>
+				<legend>Track Your Goals</legend>
+					<ul>
+						<li><label for="bmi">BMI: </label><input type="text" id="bmi" placeholder="0.00" /></li>
+						<li><label for="BodyFat">Body Fat% </label><input type="text" id="BodyFat" placeholder="0.00%" /></li>
+						<li><label for="CurrentWeight">*Current Weight? </label><input type="text" id="CurrentWeight" placeholder="Ibs." /></li>
+						<li><label for="TargetWeight">*Target Weight? </label><input type="text" id="TargetWeight" placeholder="Ibs." /></li>
+					</ul>
+				<input type="submit" id="submit" value="Save!"/>
+			</fieldset>
+		</form>
+		<script src="js/json.js" type="text/javascript"></script>
+		<script src="js/main.js" type="text/javascript"></script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -15,7 +15,7 @@ body{
 	}
 h1{
 	font-family: 'Trade Winds', cursive;
-	/*background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 553, color-stop(0, #FFFFFF), color-stop(1, #999697));*/
+	background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 553, color-stop(0, #FFFFFF), color-stop(1, #999697));
 	color: red;
 	text-shadow:
 		3px 3px 0 white,
@@ -39,8 +39,8 @@ h3{
 		1px -1px 0 white,
 		-1px 1px 0 white,
 		1px 1px 0 white;
-	text-align: center;
 	/*font-size: 50px;
+	text-align: center;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	margin-top: -1px;*/
@@ -48,7 +48,7 @@ h3{
 h4{
 	color: yellow;
 	margin-top: 10px;
-	background-color: none;
+	background-color: black;
 }
 nav{
 	text-align: center;
@@ -104,19 +104,20 @@ legend{
 		-1px 1px 0 #000,
 		1px 1px 0 #000;
 }
-/*fieldset{
+fieldset{
 	background: url(images/transparent_gradient.png) no-repeat;
 	word-wrap:normal;
 	border-color: red;
 	border-style: inset;
 	margin: 5px;
 	margin-top: 20px;
-}*/
+}
 li{
 	margin-left: -10px;
 	display: block;
 	font-family: 'Black Ops One', cursive;
 	color: white;
+	line-height: 25px;
 }
 input[type='range'] { 
 	-webkit-appearance: none;
@@ -131,7 +132,7 @@ label{
 }
 #items{
 	margin-top: 10px;
-	border-color: blue;
+	border-color: red;
 	border-style: inset;
 	background-image: -webkit-gradient(linear, right top, left top, color-stop(0, #999697), color-stop(1, #000000));
 }
@@ -177,23 +178,14 @@ div ul{
 #browselinks{
 	margin-left: 25px;
 }
-#homelink{
-	margin-left: 20px;
+#home a{
+	color: white;
 }
-#homelink:hover{
+#home a:hover{
 	color: red;
 }
-#legend{
-	font-family: 'Black Ops One', cursive;
-}
-label.error{
-	display: block;
-	margin: 10px, 0;
-	color: red;
-}
-#errors{
-	display: none;
-}
-#additemerrors.li{
-	color: red;
-}
+
+
+
+
+

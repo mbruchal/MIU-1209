@@ -1,6 +1,6 @@
 <!doctype html> 
 <!-- Michael Bruchal
-	 MIU Project 2
+	 MIU Project 4
 	 Term 1209
 	 Add Item Page --> 
 <html lang="en">
@@ -31,7 +31,9 @@
 	<!--====================================Set Background image======================================-->
 	<style type="text/css">
 		.ui-page{
-			background: #484848;
+			background-image: url(css/images/metal.png);
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
 	    h3{
 	    	text-align: center;
@@ -43,13 +45,15 @@
 	<div data-role="page" id="home">
 
 		<div data-role="header" data-position="fixed" data-theme="a">
+
 			<div>
-				<h3>My Workouts +Goal Tracker</h3>
+				<h3><img src="images/gym_icon.png" id="gymGuy"/>My Workouts </br>+Goal Tracker</h3>
 			</div>
 		</div>
-		<!--img src="images/weights.jpg" height="250px" width="320px"/-->
+
 		<div data-role="content">
-			<p><img src="images/weights.jpg" width="340" height="200"/>Save your workout routines, and track your goals as you progress.<a href="#additem" data-ajax="false" data-inline="true" data-role="button" data-icon="plus" data-iconpos="right" data-theme="e">Add a new Workout</a></p>
+			<img src="images/weights.jpg" width="290" height="200" id="cta"/>
+			<p>Save your workout routines, and track your goals as you progress.<a href="#additem" data-ajax="false" data-inline="true" data-role="button" data-icon="plus" data-iconpos="right" data-theme="e">Add a new Workout</a></p>
 			
 			<!--===================Browse Buttons====================-->
 			<ul data-role="listview" data-inset="true" data-theme="a" data-divider-theme="e">
@@ -934,8 +938,8 @@
 		<ul class="errormsg" id="errors"></ul>
 
 		<div data-role="fieldcontain" id="showData">
-			<div data-role="button" id="clearData" data-inline="true" data-icon="delete" data-iconpos="right" data-theme="e">Clear Data</div>
-			<div data-role="button" id="displayData" data-inline="true" data-icon="star" data-iconpos="right" data-theme="e">Display Data</div>
+			<div data-role="button" id="clearData" data-inline="true" data-icon="delete" data-iconpos="right" data-theme="e">Clear</div>
+			<div data-role="button" id="displayData" data-inline="true" data-icon="star" data-iconpos="right" data-theme="e">Display</div>
 			<div data-role="button" id="addNew" style="display:none;" data-inline="true" data-icon="plus" data-iconpos="right" data-theme="a">Add New</div>
 		</div>
 
